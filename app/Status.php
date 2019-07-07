@@ -24,4 +24,8 @@ class Status extends Model
     public function requests(){
         return $this->hasMany('App\Request');
     }
+
+    public function payments(){
+        return $this->hasMany('App\Payment');
+    }
 }

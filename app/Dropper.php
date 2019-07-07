@@ -13,5 +13,9 @@ class Dropper extends Model
     public function status(){
         return $this->belongsTo('App\Status');
     }
+
+    public function notification_receivers(){
+        return $this->hasMany('App\NotificationReceiver');
+    }
     
 }

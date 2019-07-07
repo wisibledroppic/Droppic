@@ -21,4 +21,8 @@ class Request extends Model
     public function status(){
         return $this->belongsTo('App\Status');
     }
+
+    public function payments(){
+        return $this->hasMany('App\Payment');
+    }
 }

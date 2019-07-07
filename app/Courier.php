@@ -25,4 +25,8 @@ class Courier extends Model
     public function requests(){
         return $this->hasMany('App\Request');
     }
+
+    public function notification_receivers(){
+        return $this->hasMany('App\NotificationReceiver');
+    }
 }
