@@ -14,7 +14,9 @@ class CreatePricingPlansTable extends Migration
     public function up()
     {
         Schema::create('pricing_plans', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('pricing_plan_id');
+            $table->string('cat_name');
+            $table->float('amount_per_month');
             $table->timestamps();
         });
     }

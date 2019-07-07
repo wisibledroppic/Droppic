@@ -404,6 +404,8 @@ class ComposerStaticInit998b097f26a02b8f1f35bc57146511fb
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Location' => __DIR__ . '/../..' . '/app/Location.php',
         'App\\Notification' => __DIR__ . '/../..' . '/app/Notification.php',
+        'App\\NotificationReceiver' => __DIR__ . '/../..' . '/app/NotificationReceiver.php',
+        'App\\Payment' => __DIR__ . '/../..' . '/app/Payment.php',
         'App\\PricingPlan' => __DIR__ . '/../..' . '/app/PricingPlan.php',
         'App\\Promotion' => __DIR__ . '/../..' . '/app/Promotion.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
