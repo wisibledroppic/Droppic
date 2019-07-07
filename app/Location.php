@@ -9,4 +9,17 @@ class Location extends Model
     public function dropper(){
         return $this->belongsTo('App\Dropper');
     }
+
+    public function customers(){
+        return $this->hasMany('App\Customer');
+    }
+
+    public function sellers(){
+        return $this->hasMany('App\Seller');
+    }
+
+    public function couriers(){
+        return $this->hasMany('App\Courier');
+    }
+    
 }
