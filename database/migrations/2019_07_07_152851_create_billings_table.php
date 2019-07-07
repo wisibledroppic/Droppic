@@ -16,9 +16,9 @@ class CreateBillingsTable extends Migration
         Schema::create('billings', function (Blueprint $table) {
             $table->bigIncrements('billing_id');
             $table->float('bil_amount');
-            $table->integer('customer_p')->references('customer_id')->on('customers')->nullable();
-            $table->integer('seller_p')->references('seller_id')->on('sellers')->nullable();
-            $table->integer('courier_p')->references('courier_id')->on('couriers')->nullable();
+            $table->integer('customer_id')->references('customer_id')->on('customers')->nullable();
+            $table->integer('seller_id')->references('seller_id')->on('sellers')->nullable();
+            $table->integer('courier_id')->references('courier_id')->on('couriers')->nullable();
             $table->timestamps();
         });
     }

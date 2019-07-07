@@ -16,10 +16,10 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->bigIncrements('payment_id');
             $table->float('payment_amount');
-            $table->integer('request_p')->references('request_id')->on('requests')->nullable();
-            $table->integer('status_p')->references('status_id')->on('statuses')->nullable();
-            $table->integer('promotion_p')->references('promotion_id')->on('promotions')->nullable();
-            $table->integer('bank_p')->references('bank_id')->on('banks')->nullable();
+            $table->integer('request_id')->references('request_id')->on('requests')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('promotion_id')->references('promotion_id')->on('promotions')->nullable();
+            $table->integer('bank_id')->references('bank_id')->on('banks')->nullable();
             $table->timestamps();
         });
     }

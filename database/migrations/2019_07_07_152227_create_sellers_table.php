@@ -19,9 +19,9 @@ class CreateSellersTable extends Migration
             $table->string('scontact')->unique();
             $table->string('scnic')->unique();
             $table->string('email')->unique();
-            $table->integer('status_p')->references('status_id')->on('statuses')->nullable();
-            $table->integer('location_p')->references('location_id')->on('locations')->nullable();
-            $table->integer('pricing_plan_p')->references('pricing_plan_id')->on('pricing_plans')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('location_id')->references('location_id')->on('locations')->nullable();
+            $table->integer('pricing_plan_id')->references('pricing_plan_id')->on('pricing_plans')->nullable();
             $table->timestamps();
         });
     }

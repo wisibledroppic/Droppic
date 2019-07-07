@@ -21,10 +21,10 @@ class CreateRequestsTable extends Migration
             $table->string('email');
             $table->string('order_desc');
             $table->float('req_amount');
-            $table->integer('customer_p')->references('customer_id')->on('customers')->nullable();
-            $table->integer('seller_p')->references('seller_id')->on('sellers')->nullable();
-            $table->integer('courier_p')->references('courier_id')->on('couriers')->nullable();
-            $table->integer('status_p')->references('status_id')->on('statuses')->nullable();
+            $table->integer('customer_id')->references('customer_id')->on('customers')->nullable();
+            $table->integer('seller_id')->references('seller_id')->on('sellers')->nullable();
+            $table->integer('courier_id')->references('courier_id')->on('couriers')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
             $table->timestamps();
         });
     }

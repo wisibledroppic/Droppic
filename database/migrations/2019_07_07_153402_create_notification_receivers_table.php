@@ -15,10 +15,10 @@ class CreateNotificationReceiversTable extends Migration
     {
         Schema::create('notification_receivers', function (Blueprint $table) {
             $table->bigIncrements('not_rec_id');
-            $table->integer('customer_p')->references('customer_id')->on('customers')->nullable();
-            $table->integer('seller_p')->references('seller_id')->on('sellers')->nullable();
-            $table->integer('courier_p')->references('courier_id')->on('couriers')->nullable();
-            $table->integer('dropper_p')->references('dropper_id')->on('droppers')->nullable();
+            $table->integer('customer_id')->references('customer_id')->on('customers')->nullable();
+            $table->integer('seller_id')->references('seller_id')->on('sellers')->nullable();
+            $table->integer('courier_id')->references('courier_id')->on('couriers')->nullable();
+            $table->integer('dropper_id')->references('dropper_id')->on('droppers')->nullable();
             $table->timestamps();
         });
     }

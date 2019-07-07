@@ -18,8 +18,8 @@ class CreateDroppersTable extends Migration
             $table->string('dname');
             $table->string('dcontact')->unique();
             $table->string('davail_hrs');
-            $table->integer('status_p')->references('status_id')->on('statuses')->nullable();
-            $table->integer('location_p')->references('location_id')->on('locations')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('location_id')->references('location_id')->on('locations')->nullable();
             // $table->integer('status_p');
             // $table->foreign('status_p')->references('status_id')->on('status');
             // $table->integer('location_p');
