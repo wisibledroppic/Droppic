@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBankTable extends Migration
+class CreateStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateBankTable extends Migration
      */
     public function up()
     {
-        Schema::create('bank', function (Blueprint $table) {
-            $table->bigIncrements('bank_id');
-            $table->string('bname');
+        Schema::create('statuses', function (Blueprint $table) {
+            $table->bigIncrements('status_id');
+            $table->string('status_phase');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateBankTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bank');
+        Schema::dropIfExists('statuses');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDropperTable extends Migration
+class CreatePricingPlansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateDropperTable extends Migration
      */
     public function up()
     {
-        Schema::create('dropper', function (Blueprint $table) {
-            $table->bigIncrements('dropper_id');
-            $table->string('dname');
-            $table->string('dcontact')->unique();
-            $table->string('davail_hrs');
+        Schema::create('pricing_plans', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateDropperTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dropper');
+        Schema::dropIfExists('pricing_plans');
     }
 }

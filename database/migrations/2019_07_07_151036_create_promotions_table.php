@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePromotionTable extends Migration
+class CreatePromotionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreatePromotionTable extends Migration
      */
     public function up()
     {
-        Schema::create('promotion', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('promotions', function (Blueprint $table) {
+            $table->bigIncrements('promo_id');
             $table->string('promo_code');
             $table->string('promo_message');
             $table->timestamps();
@@ -28,6 +28,6 @@ class CreatePromotionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('promotion');
+        Schema::dropIfExists('promotions');
     }
 }
