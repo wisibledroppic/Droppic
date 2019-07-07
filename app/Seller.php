@@ -21,4 +21,8 @@ class Seller extends Model
     public function billings(){
         return $this->hasMany('App\Billing');
     }
+
+    public function requests(){
+        return $this->hasMany('App\Request');
+    }
 }

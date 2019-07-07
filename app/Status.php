@@ -20,4 +20,8 @@ class Status extends Model
     public function sellers(){
         return $this->hasMany('App\Sellerr');
     }
+
+    public function requests(){
+        return $this->hasMany('App\Request');
+    }
 }
