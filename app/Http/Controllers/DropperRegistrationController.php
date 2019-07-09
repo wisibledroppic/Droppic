@@ -18,7 +18,7 @@ class DropperRegistrationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest:dropper');
     }
 
     
@@ -34,12 +34,11 @@ class DropperRegistrationController extends Controller
             'email' => 'email|required|unique:droppers',
             'dcnic' => 'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         if ($validator->fails()) {
-            return redirect('droppers/registration')
-                        ->withErrors($validator)
-                        ->withInput();
+            return redirect()->back()->withErrors($validator)->withInput($request->only('email','dname','dcontact','dcnic'));
         }
         
         $dropper = new Dropper ();
@@ -47,9 +46,9 @@ class DropperRegistrationController extends Controller
         $dropper->email = $request->get ( 'email' );
         $dropper->dcnic = $request->get ( 'dcnic' );
         $dropper->dcontact = $request->get ( 'dcontact' );
-        // $dropper->password = Hash::make ( $request->get ( 'password' ) );
-        $dropper->password =( $request->get ( 'password' ) );
+        $dropper->password = Hash::make ( $request->get ( 'password' ) );
+        //$dropper->password =( $request->get ( 'password' ) );
         $dropper->save ();
-        return redirect ( '/home' );
+        return redirect()->intended(route('dropper.dashboard'));
     }
 }

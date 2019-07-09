@@ -34,40 +34,47 @@
                                         <div class="position-relative form-group"><label for="exampleEmail"
                                                 class=""><span class="text-danger">*</span> Email</label><input
                                                 name="email" id="email" placeholder="Email here..." type="email"
-                                                class="form-control"></div>
+                                                class="form-control" value="{{ old('email') }}" required autocomplete="email"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Name</label><input
                                                 name="dname" id="dname" placeholder="Name here..." type="text"
-                                                class="form-control"></div>
+                                                class="form-control" value="{{ old('dname') }}" required autocomplete="dname"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Contact</label><input
                                                 name="dcontact" id="dcontact" placeholder="Cell #" type="text"
-                                                class="form-control"></div>
+                                                class="form-control" value="{{ old('dcontact') }}" required autocomplete="dcontact"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>CNIC No </label><input
                                                 name="dcnic" id="exampleName" placeholder="CNIC #" type="text"
-                                                class="form-control"></div>
+                                                class="form-control" value="{{ old('dcnic') }}" required autocomplete="dcnic"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                        <div class="position-relative form-group"><label for="password" class=" col-form-label text-md-right"><span class="text-danger">*</span>{{ __('Password') }}</label>
                                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"></div>
+                                        <div class="position-relative form-group"><label for="password-confirm" class="col-form-label text-md-right"><span class="text-danger">*</span>{{ __('Confirm Password') }}</label><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"></div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group col-md-6">
+                                        <label for="ReCaptcha">Recaptcha:</label>
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}
+                                          </div>
+                                      </div>
                                 </div>
                                 <div class="mt-3 position-relative form-check"><input name="check" id="exampleCheck"
                                         type="checkbox" class="form-check-input"><label for="exampleCheck"
                                         class="form-check-label">Accept our <a href="javascript:void(0);">Terms
                                             and Conditions</a>.</label></div>
                                 <div class="mt-4 d-flex align-items-center">
-                                    <h5 class="mb-0">Already have an account? <a href="javascript:void(0);"
+                                    <h5 class="mb-0">Already have an account? <a href="{{ route('dropper.showlogin') }}"
                                             class="text-primary">Sign in</a></h5>
                                     <div class="ml-auto">
                                         <button

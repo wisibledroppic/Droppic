@@ -40,9 +40,22 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+            'hash' => false,
+        ],
+
+        'dropper' => [
+            'driver' => 'session',
+            'provider' => 'droppers',
+        ],
+
+
+        'dropper-api' => [
+            'driver' => 'token',
+            'provider' => 'droppers',
             'hash' => false,
         ],
     ],
@@ -70,6 +83,11 @@ return [
             'model' => App\User::class,
         ],
 
+        'droppers' => [
+            'driver' => 'eloquent',
+            'model' => App\Dropper::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -94,6 +112,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'droppers' => [
+            'provider' => 'droppers',
             'table' => 'password_resets',
             'expire' => 60,
         ],

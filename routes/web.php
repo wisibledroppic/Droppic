@@ -19,8 +19,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('droppers/registration', ['as' => 'dropper.registration', 'uses' => 'DropperRegistrationController@showDroppersResgistrationForm']);
-Route::post('droppers/registration', ['as' => 'dropper.createregistration', 'uses' => 'DropperRegistrationController@registerDropper']);
+Route::prefix('droppers')->group(function(){
+    Route::get('/dashboard', ['as' => 'dropper.dashboard', 'uses' => 'DropperController@index']);
+
+    Route::get('/registration', ['as' => 'dropper.registration', 'uses' => 'DropperRegistrationController@showDroppersResgistrationForm']);
+    Route::post('/registration', ['as' => 'dropper.createregistration', 'uses' => 'DropperRegistrationController@registerDropper']);
+    
+    Route::get('/login', ['as' => 'dropper.showlogin', 'uses' => 'DropperLoginController@showDroppersLoginForm']);
+    Route::post('/login', ['as' => 'dropper.login.submit', 'uses' => 'DropperLoginController@login']);
+
+    Route::get('/profile', ['as' => 'dropper.showProfile', 'uses' => 'DropperController@showDroppersProfile']);
+    Route::post('/profile', ['as' => 'dropper.editProfile', 'uses' => 'DropperController@editDroppersProfile']);
+});
+
+
 
 
 

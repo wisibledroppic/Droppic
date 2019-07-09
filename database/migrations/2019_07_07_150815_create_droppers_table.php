@@ -16,7 +16,7 @@ class CreateDroppersTable extends Migration
         Schema::create('droppers', function (Blueprint $table) {
             $table->bigIncrements('dropper_id');
             $table->string('dname');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('dcontact')->unique();
             $table->string('davail_hrs')->nullable();
             $table->string('dcnic');
@@ -28,6 +28,7 @@ class CreateDroppersTable extends Migration
             // $table->foreign('status_p')->references('status_id')->on('status');
             // $table->integer('location_p');
             // $table->foreign('location_p')->references('location_id')->on('location');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
