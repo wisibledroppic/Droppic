@@ -3,13 +3,13 @@
 @section('content')
 
 @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
 @endif
 
 
@@ -32,42 +32,54 @@
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleEmail"
-                                                class=""><span class="text-danger">*</span> Email</label><input
-                                                name="email" id="email" placeholder="Email here..." type="email"
-                                                class="form-control" value="{{ old('email') }}" required autocomplete="email"></div>
+                                                class=""><span class="text-danger">*</span> Email</label>
+                                            <input name="email" id="email" value="{{ old('email') }}" required
+                                                autocomplete="email" placeholder="Your Email"
+                                                class="form-control input-mask-trigger"
+                                                data-inputmask="'alias': 'email'" im-insert="true">
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Name</label><input
                                                 name="dname" id="dname" placeholder="Name here..." type="text"
-                                                class="form-control" value="{{ old('dname') }}" required autocomplete="dname"></div>
+                                                class="form-control" value="{{ old('dname') }}" required
+                                                autocomplete="dname"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
-                                                class=""><span class="text-danger">*</span>Contact</label><input
-                                                name="dcontact" id="dcontact" placeholder="Cell #" type="text"
-                                                class="form-control" value="{{ old('dcontact') }}" required autocomplete="dcontact"></div>
+                                                class=""><span class="text-danger">*</span>Contact</label><input name="dcontact" id="dcontact" value="{{ old('dcontact') }}" required
+                                                autocomplete="dcontact" placeholder="Your Cell"
+                                                class="form-control input-mask-trigger" data-inputmask="'mask': '+[99-]999-9999999'" im-insert="true"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
-                                                class=""><span class="text-danger">*</span>CNIC No </label><input
-                                                name="dcnic" id="exampleName" placeholder="CNIC #" type="text"
-                                                class="form-control" value="{{ old('dcnic') }}" required autocomplete="dcnic"></div>
+                                                class=""><span class="text-danger">*</span>CNIC No </label><input name="dcnic" id="dcnic" value="{{ old('dcnic') }}" required
+                                                autocomplete="dcnic" placeholder="Your NIC"
+                                                class="form-control input-mask-trigger" data-inputmask="'mask': '[99999-]9999999-9'" im-insert="true"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="password" class=" col-form-label text-md-right"><span class="text-danger">*</span>{{ __('Password') }}</label>
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"></div>
+                                        <div class="position-relative form-group"><label for="password"
+                                                class=" col-form-label text-md-right"><span
+                                                    class="text-danger">*</span>{{ __('Password') }}</label>
+                                            <input id="password" type="password"
+                                                class="form-control @error('password') is-invalid @enderror"
+                                                name="password" required autocomplete="new-password"></div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="password-confirm" class="col-form-label text-md-right"><span class="text-danger">*</span>{{ __('Confirm Password') }}</label><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"></div>
+                                        <div class="position-relative form-group"><label for="password-confirm"
+                                                class="col-form-label text-md-right"><span
+                                                    class="text-danger">*</span>{{ __('Confirm Password') }}</label><input
+                                                id="password-confirm" type="password" class="form-control"
+                                                name="password_confirmation" required autocomplete="new-password"></div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group col-md-6">
-                                        <label for="ReCaptcha">Recaptcha:</label>
-                                        {!! NoCaptcha::renderJs() !!}
-                                        {!! NoCaptcha::display() !!}
-                                          </div>
-                                      </div>
+                                            <label for="ReCaptcha">Recaptcha:</label>
+                                            {!! NoCaptcha::renderJs() !!}
+                                            {!! NoCaptcha::display() !!}
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mt-3 position-relative form-check"><input name="check" id="exampleCheck"
                                         type="checkbox" class="form-check-input"><label for="exampleCheck"
@@ -93,7 +105,7 @@
                                 <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-premium-dark"
                                     tabindex="-1">
                                     <div class="slide-img-bg"
-                                        style="background-image: url('assets/images/originals/citynights.jpg');"></div>
+                                    style="background-image: url('assets/images/originals/citynights.jpg');"></div>
                                     <div class="slider-content">
                                         <h3>Scalable, Modular, Consistent</h3>
                                         <p>Easily exclude the components you don't require. Lightweight, consistent

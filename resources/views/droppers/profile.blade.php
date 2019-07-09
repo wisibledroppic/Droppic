@@ -23,9 +23,9 @@
             <label for="davail_hrs" class="">Availaibilty Hours : </label>
         </div>
         <div class="form-row">
-            <div class="col-md-6">
-                <label for="davail_hrs" class=""> FROM </label>
-                <input name="davail_hrs" id="timepicker1" width="276" class="form-control" />
+            <div class="col-md-6 ">
+                <label for="davail_hrs1" class=""> FROM </label>
+                <input name="davail_hrs1" id="timepicker1" width="276" class="form-control" />
                 <script>
                     $('#timepicker1').timepicker({
                         uiLibrary: 'bootstrap4'
@@ -33,8 +33,8 @@
                 </script>
             </div>
             <div class="col-md-6">
-                <label for="davail_hrs" class=""> TO </label>
-                <input name="davail_hrs" id="timepicker" width="276" class="form-control" />
+                <label for="davail_hrs2" class=""> TO </label>
+                <input name="davail_hrs2" id="timepicker" width="276" class="form-control" />
                 <script>
                     $('#timepicker').timepicker({
                         uiLibrary: 'bootstrap4'
