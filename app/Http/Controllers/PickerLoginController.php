@@ -31,9 +31,10 @@ class PickerLoginController extends Controller
             'cat' => 'required',
         ]);
 
-        if(Auth::guard('picker')->attempt(['email'=> $request->email,'password'=>$request->password],$request->remember,$request->cat)){
+        if(Auth::guard('picker')->attempt(['email'=> $request->email,'password'=>$request->password,'picker_category_id'=>$request->cat],$request->remember)){
             //return redirect('droppers/dashboard');
             //$c = PickerCategory::find($request->cat);
+            
             $c = PickerCategory::where('picker_category_id', $request->cat);
             return redirect()->intended(route('picker.dashboard'));
         }

@@ -9,7 +9,7 @@ class PickerController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:picker');
+        //$this->middleware('auth:picker');
     }
 
     public function index()
