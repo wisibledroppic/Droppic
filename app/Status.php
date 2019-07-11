@@ -9,18 +9,10 @@ class Status extends Model
     public function droppers(){
         return $this->hasMany('App\Dropper');
     }
-    public function customers(){
-        return $this->hasMany('App\Customer');
+    public function pickers(){
+        return $this->hasMany('App\Picker');
     }
-
-    public function couriers(){
-        return $this->hasMany('App\Courier');
-    }
-
-    public function sellers(){
-        return $this->hasMany('App\Sellerr');
-    }
-
+    
     public function requests(){
         return $this->hasMany('App\Request');
     }

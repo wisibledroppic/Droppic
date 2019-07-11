@@ -14,7 +14,7 @@ class Dropper extends Authenticatable
     use Notifiable;
     
     protected $table = 'droppers';
-    protected $guard= 'dropper';
+    protected $guard= 'dropper'; 
 
     /**
      * The attributes that are mass assignable.

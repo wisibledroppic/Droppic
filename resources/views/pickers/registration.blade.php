@@ -22,12 +22,12 @@
                     <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9">
                         <div class="app-logo"></div>
                         <h4>
-                            <div>Welcome Dropper,</div>
+                            <div>Welcome Picker,</div>
                             <span>It only takes a <span class="text-success">few seconds</span> to create your
                                 account</span>
                         </h4>
                         <div>
-                            <form method="POST" action="{{ route('dropper.createregistration') }}">
+                            <form method="POST" action="{{ route('picker.createregistration') }}">
                                 @csrf
                                 <div class="form-row">
                                     <div class="col-md-6">
@@ -86,7 +86,7 @@
                                         class="form-check-label">Accept our <a href="javascript:void(0);">Terms
                                             and Conditions</a>.</label></div>
                                 <div class="mt-4 d-flex align-items-center">
-                                    <h5 class="mb-0">Already have an account? <a href="{{ route('dropper.showlogin') }}"
+                                    <h5 class="mb-0">Already have an account? <a href="{{ route('picker.showlogin') }}"
                                             class="text-primary">Sign in</a></h5>
                                     <div class="ml-auto">
                                         <button

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCustomersTable extends Migration
+class CreatePickersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateCustomersTable extends Migration
      */
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
-            $table->bigIncrements('customer_id');
-            $table->string('cname');
-            $table->string('ccontact')->unique();
-            $table->string('ccnic')->unique();
+        Schema::create('pickers', function (Blueprint $table) {
+            $table->bigIncrements('picker_id');
+            $table->string('pname');
+            $table->string('pcontact')->unique();
+            $table->string('pcnic')->unique();
             $table->string('email')->unique();
+            $table->string('password');
+            $table->integer('picker_category_id')->references('picker_category_id')->on('picker_categories')->nullable();
             $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
             $table->integer('location_id')->references('location_id')->on('locations')->nullable();
             $table->integer('pricing_plan_id')->references('pricing_plan_id')->on('pricing_plans')->nullable();
@@ -33,6 +35,6 @@ class CreateCustomersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('pickers');
     }
 }

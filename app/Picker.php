@@ -3,9 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class Customer extends Model
+class Picker extends Authenticatable
 {
+
+    use Notifiable;
+    
+    protected $table = 'pickers';
+    public $primarykey = 'picker_id';
+    protected $guard= 'picker';
+
     public function status(){
         return $this->belongsTo('App\Status');
     }
@@ -28,5 +38,9 @@ class Customer extends Model
 
     public function notification_receivers(){
         return $this->hasMany('App\NotificationReceiver');
+    }
+
+    public function picker_categories(){
+        return $this->belongsTo('App\PickerCategory');
     }
 }

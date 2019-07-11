@@ -17,16 +17,8 @@ class Location extends Model
         return $this->belongsTo('App\Dropper');
     }
 
-    public function customers(){
-        return $this->hasMany('App\Customer');
-    }
-
-    public function sellers(){
-        return $this->hasMany('App\Seller');
-    }
-
-    public function couriers(){
-        return $this->hasMany('App\Courier');
+    public function pickers(){
+        return $this->hasMany('App\Picker');
     }
     
 }

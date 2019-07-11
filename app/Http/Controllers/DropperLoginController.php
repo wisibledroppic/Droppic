@@ -13,12 +13,12 @@ class DropperLoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:dropper');
+        $this->middleware('guest:dropper')->except('logout');
     }
 
     public function showDroppersLoginForm(){
         //return view ('pages.home')->with('news',$news);
-        return view ('droppers.login-dummy');
+        return view ('droppers.login');
     }
 
     public function login(Request $request){

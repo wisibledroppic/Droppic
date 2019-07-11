@@ -18,7 +18,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
+    <script src="{{ asset('assets/js/main.8d288f825d8dffbbe55e.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">

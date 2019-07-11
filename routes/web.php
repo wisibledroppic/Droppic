@@ -33,6 +33,20 @@ Route::prefix('droppers')->group(function(){
 });
 
 
+Route::prefix('pickers')->group(function(){
+    Route::get('/dashboard', ['as' => 'picker.dashboard', 'uses' => 'PickerController@index']);
+
+    Route::get('/registration', ['as' => 'picker.registration', 'uses' => 'PickerRegistrationController@showPickersResgistrationForm']);
+    Route::post('/registration', ['as' => 'picker.createregistration', 'uses' => 'PickerRegistrationController@registerPicker']);
+    
+    Route::get('/login', ['as' => 'picker.showlogin', 'uses' => 'PickerLoginController@showPickersLoginForm']);
+    Route::post('/login', ['as' => 'picker.login.submit', 'uses' => 'PickerLoginController@login']);
+
+    Route::get('/profile', ['as' => 'picker.showProfile', 'uses' => 'PickerController@showPickersProfile']);
+    Route::post('/profile', ['as' => 'picker.editProfile', 'uses' => 'PickerController@editPickersProfile']);
+});
+
+
 
 
 

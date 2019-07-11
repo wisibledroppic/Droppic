@@ -68,7 +68,7 @@
             <div class="top-right links">
                 <a href="{{ route('dropper.showlogin') }}">Dropper</a>
                 {{-- <a href="{{ route('picker.showlogin') }}">Picker</a> --}}
-                <a href="#">Picker</a>
+                <a href="{{ route('picker.showlogin') }}">Picker</a>
             </div>
             {{-- @if (Route::has('login'))
                 <div class="top-right links">

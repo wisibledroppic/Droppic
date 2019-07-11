@@ -58,6 +58,18 @@ return [
             'provider' => 'droppers',
             'hash' => false,
         ],
+
+        'picker' => [
+            'driver' => 'session',
+            'provider' => 'pickers',
+        ],
+
+
+        'picker-api' => [
+            'driver' => 'token',
+            'provider' => 'pickers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -86,6 +98,11 @@ return [
         'droppers' => [
             'driver' => 'eloquent',
             'model' => App\Dropper::class,
+        ],
+
+        'pickers' => [
+            'driver' => 'eloquent',
+            'model' => App\Picker::class,
         ],
 
         // 'users' => [
@@ -118,6 +135,12 @@ return [
 
         'droppers' => [
             'provider' => 'droppers',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'pickers' => [
+            'provider' => 'pickers',
             'table' => 'password_resets',
             'expire' => 60,
         ],

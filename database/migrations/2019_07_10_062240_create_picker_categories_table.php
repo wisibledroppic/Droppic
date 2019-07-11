@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBillingsTable extends Migration
+class CreatePickerCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateBillingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('billings', function (Blueprint $table) {
-            $table->bigIncrements('billing_id');
-            $table->float('bil_amount');
-            $table->integer('picker_id')->references('picker_id')->on('pickers')->nullable();
+        Schema::create('picker_categories', function (Blueprint $table) {
+            $table->bigIncrements('picker_category_id');
+            $table->string('cat_name');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateBillingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billings');
+        Schema::dropIfExists('picker_categories');
     }
 }

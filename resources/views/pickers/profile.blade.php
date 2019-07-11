@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card-body">
-    <h5 class="card-title">Dropper's Profile</h5>
+    <h5 class="card-title">Picker's Profile </h5>
     <form class="">
         <div class="form-row">
             <div class="col-md-4">
