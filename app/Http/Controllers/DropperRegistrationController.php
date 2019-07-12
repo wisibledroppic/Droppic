@@ -30,7 +30,7 @@ class DropperRegistrationController extends Controller
     public function registerDropper(Request $request){
         $validator = Validator::make($request->all(), [
             'dname' => 'required',
-            'dcontact' => 'required',
+            'dcontact' => ['required','min:15'],
             'email' => 'email|required|unique:droppers',
             'dcnic' => 'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],

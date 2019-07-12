@@ -2,7 +2,7 @@
 
 @section('content')
 
-@if ($errors->any())
+{{-- @if ($errors->any())
 <div class="alert alert-danger">
     <ul>
         @foreach ($errors->all() as $error)
@@ -10,7 +10,7 @@
         @endforeach
     </ul>
 </div>
-@endif
+@endif --}}
 
 
 <div class="app-container app-theme-white body-tabs-shadow">
@@ -29,34 +29,69 @@
                         <div>
                             <form method="POST" action="{{ route('picker.createregistration') }}">
                                 @csrf
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label for="sel1"><strong>Register Yourself as:</strong></label>
+                                        <select class="form-control  @error('name') is-invalid @enderror" id="cat" name="cat" >
+                                            @if (count ($cats)>0)
+                                            @foreach ($cats as $cat)
+                                            <option value={{$cat->picker_category_id}}>{{$cat->cat_name}}</option>
+                                            @endforeach
+                                            @else
+                                            <p>Currently There are no picker Categories in our records.</p>
+                                            @endif
+
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleEmail"
                                                 class=""><span class="text-danger">*</span> Email</label>
                                             <input name="email" id="email" value="{{ old('email') }}" required
                                                 autocomplete="email" placeholder="Your Email"
-                                                class="form-control input-mask-trigger"
+                                                class="form-control input-mask-trigger  @error('email') is-invalid @enderror"
                                                 data-inputmask="'alias': 'email'" im-insert="true">
+                                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Name</label><input
-                                                name="dname" id="dname" placeholder="Name here..." type="text"
-                                                class="form-control" value="{{ old('dname') }}" required
-                                                autocomplete="dname"></div>
+                                                name="pname" id="pname" placeholder="Name here..." type="text"
+                                                class="form-control  @error('pname') is-invalid @enderror" value="{{ old('pname') }}" required
+                                                autocomplete="pname">
+                                                @error('pname')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror</div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
-                                                class=""><span class="text-danger">*</span>Contact</label><input name="dcontact" id="dcontact" value="{{ old('dcontact') }}" required
-                                                autocomplete="dcontact" placeholder="Your Cell"
-                                                class="form-control input-mask-trigger" data-inputmask="'mask': '+[99-]999-9999999'" im-insert="true"></div>
+                                                class=""><span class="text-danger">*</span>Contact</label><input name="pcontact" id="pcontact" value="{{ old('pcontact') }}" required
+                                                autocomplete="pcontact" placeholder="Your Cell"
+                                                class="form-control input-mask-trigger  @error('pcontact') is-invalid @enderror" data-inputmask="'mask': '+[99-]999-9999999'" im-insert="true">
+                                                @error('pcontact')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror</div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="exampleName"
-                                                class=""><span class="text-danger">*</span>CNIC No </label><input name="dcnic" id="dcnic" value="{{ old('dcnic') }}" required
-                                                autocomplete="dcnic" placeholder="Your NIC"
-                                                class="form-control input-mask-trigger" data-inputmask="'mask': '[99999-]9999999-9'" im-insert="true"></div>
+                                                class=""><span class="text-danger">*</span>CNIC No </label><input name="pcnic" id="pcnic" value="{{ old('pcnic') }}" required
+                                                autocomplete="pcnic" placeholder="Your NIC"
+                                                class="form-control input-mask-trigger  @error('pcnic') is-invalid @enderror" data-inputmask="'mask': '[99999-]9999999-9'" im-insert="true">
+                                                @error('pcnic')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror</div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="password"
@@ -64,14 +99,24 @@
                                                     class="text-danger">*</span>{{ __('Password') }}</label>
                                             <input id="password" type="password"
                                                 class="form-control @error('password') is-invalid @enderror"
-                                                name="password" required autocomplete="new-password"></div>
+                                                name="password" required autocomplete="new-password">
+                                                @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror</div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="position-relative form-group"><label for="password-confirm"
                                                 class="col-form-label text-md-right"><span
                                                     class="text-danger">*</span>{{ __('Confirm Password') }}</label><input
-                                                id="password-confirm" type="password" class="form-control"
-                                                name="password_confirmation" required autocomplete="new-password"></div>
+                                                id="password-confirm" type="password" class="form-control  @error('password_confirmation') is-invalid @enderror"
+                                                name="password_confirmation" required autocomplete="new-password">
+                                                @error('password_confirmation')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror</div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group col-md-6">

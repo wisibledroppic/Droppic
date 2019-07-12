@@ -69,6 +69,7 @@
                 <a href="{{ route('dropper.showlogin') }}">Dropper</a>
                 {{-- <a href="{{ route('picker.showlogin') }}">Picker</a> --}}
                 <a href="{{ route('picker.showlogin') }}">Picker</a>
+                <a href="{{ route('login') }}">Admin</a>
             </div>
             {{-- @if (Route::has('login'))
                 <div class="top-right links">
@@ -87,6 +88,16 @@
             <div class="content">
                 <div class="title m-b-md">
                     Droppic
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="panel">
+                                @component('components.who')
+                    @endcomponent
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="links">

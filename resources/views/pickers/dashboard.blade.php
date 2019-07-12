@@ -13,8 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in! as PICKER
                 </div>
             </div>
         </div>

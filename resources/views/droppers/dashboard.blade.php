@@ -13,7 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in! as DROPPER
                     {{-- @if (Auth::guard('dropper')->check())
                     Welcome {{Auth::guard('dropper')->user()  }} 
                     @else
