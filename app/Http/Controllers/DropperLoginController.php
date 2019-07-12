@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 
+use App\Dropper;
+
 
 
 
@@ -27,9 +29,16 @@ class DropperLoginController extends Controller
             'password'=> 'required|min:8'
         ]);
 
-        if(Auth::guard('dropper')->attempt(['email'=> $request->email,'password'=>$request->password],$request->remember)){
+
+
+        $credentials = $request->only('email', 'password');
+
+        // if(Auth::guard('dropper')->attempt(['email'=> $request->email,'password'=>$request->password],$request->remember)){
+        if(Auth::guard('dropper')->attempt($credentials)){
             //return redirect('droppers/dashboard');
-            return redirect()->intended(route('dropper.dashboard'));
+            // $dropper = Dropper::where('email', $request->email)->first();
+            // Auth::guard('dropper')->login($dropper);
+            return redirect()->intended(route('dropper.dashboard')); 
         }
         else{
             return redirect()->back()->withInput($request->only('email','remember'));
