@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DroppersTableSeeder::class);
         $this->call(PickersTableSeeder::class);
         $this->call(RequestStatusesTableSeeder::class);
+        $this->call(StatusesTableSeeder::class);
         
     }
 }
