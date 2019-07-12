@@ -13,8 +13,22 @@ class Status extends Model
         return $this->hasMany('App\Picker');
     }
     
-    public function requests(){
-        return $this->hasMany('App\Request');
+
+    public function billings(){
+        return $this->hasMany('App\Billing');
+    }
+
+    public function locations(){
+        return $this->hasMany('App\Location');
+    }
+
+
+    public function promotions(){
+        return $this->hasMany('App\Promotion');
+    }
+
+    public function notifications(){
+        return $this->hasMany('App\Notification');
     }
 
     public function payments(){

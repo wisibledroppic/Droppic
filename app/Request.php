@@ -10,8 +10,8 @@ class Request extends Model
         return $this->belongsTo('App\Picker');
     }
     
-    public function status(){
-        return $this->belongsTo('App\Status');
+    public function request_status(){
+        return $this->belongsTo('App\RequestStatus');
     }
 
     public function payments(){

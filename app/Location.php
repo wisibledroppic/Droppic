@@ -21,4 +21,9 @@ class Location extends Model
         return $this->hasMany('App\Picker');
     }
     
+
+    public function status(){
+        return $this->belongsTo('App\Status');
+    }
+
 }

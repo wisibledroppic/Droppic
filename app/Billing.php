@@ -10,4 +10,8 @@ class Billing extends Model
         return $this->belongsTo('App\Picker');
     }
     
+    public function status(){
+        return $this->belongsTo('App\Status');
+    }
+    
 }
