@@ -810,7 +810,11 @@
                                         </div>
                                         <div class="widget-content-left  ml-3 header-user-info">
                                             <div class="widget-heading">
-                                                    Alina
+                                                    @if (Auth::guard('picker')->check())
+                                                        {{Auth::guard('picker')->user()->pname }}
+                                                    @else
+                                                    <button class="btn"><a href="{{ route('picker.showlogin') }}" class="btn-lg btn btn-link">Picker Login</a></button>
+                                                    @endif
                                             </div>
                                             <div class="widget-subheading">
                                                     
@@ -1965,7 +1969,11 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>    <div class="app-main__outer">
+                        </div>  
+                        <div class="app-main__inner">
+                                @yield('content')
+                        </div>
+                        <div class="app-main__outer">
                             <div class="app-wrapper-footer">
                                 <div class="app-footer">
                                     <div class="app-footer__inner">
@@ -2545,7 +2553,7 @@
                             </div>
                         </div>
                     </div>
-            @yield('content')
+            
         </main>
     </div>
 </body>

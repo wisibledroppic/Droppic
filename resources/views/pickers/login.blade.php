@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.lay-picker')
 
 @section('content')
 
@@ -101,7 +101,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     <div class="col-md-6">
                                         <label for="sel1"><strong>Sign in as:</strong></label>
                                         <select class="form-control" id="cat" name="cat" >
@@ -115,7 +115,7 @@
 
                                         </select>
                                     </div>
-                                </div>
+                                </div> --}}
 
 
 

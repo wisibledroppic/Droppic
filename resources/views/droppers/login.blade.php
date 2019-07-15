@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.lay-dropper')
 
 @section('content')
 

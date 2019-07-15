@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.lay-picker')
 
 @section('content')
 <div class="container">

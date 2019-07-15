@@ -75,6 +75,8 @@
 
         
 
+
+
         <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
                 <div class="app-header header-shadow">
                     <div class="app-header__logo">
@@ -428,42 +430,42 @@
                                                                                     <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/1.jpg"
+                                                                                                    src="../assets/images/avatars/1.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/2.jpg"
+                                                                                                    src="../assets/images/avatars/2.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/3.jpg"
+                                                                                                    src="../assets/images/avatars/3.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/4.jpg"
+                                                                                                    src="../assets/images/avatars/4.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/5.jpg"
+                                                                                                    src="../assets/images/avatars/5.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/9.jpg"
+                                                                                                    src="../assets/images/avatars/9.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/7.jpg"
+                                                                                                    src="../assets/images/avatars/7.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                             <div class="avatar-icon"><img
-                                                                                                    src="assets/images/avatars/8.jpg"
+                                                                                                    src="../assets/images/avatars/8.jpg"
                                                                                                     alt=""></div>
                                                                                         </div>
                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
@@ -711,7 +713,7 @@
                                         <div class="widget-content-left">
                                             <div class="btn-group">
                                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                                                    <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                                    <img width="42" class="rounded-circle" src="../assets/images/avatars/1.jpg" alt="">
                                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                                 </a>
                                                 <div tabindex="-1" role="menu" aria-hidden="true" class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
@@ -723,7 +725,7 @@
                                                                     <div class="widget-content-wrapper">
                                                                         <div class="widget-content-left mr-3">
                                                                             <img width="42" class="rounded-circle"
-                                                                                 src="assets/images/avatars/1.jpg"
+                                                                                 src="../assets/images/avatars/1.jpg"
                                                                                  alt="">
                                                                         </div>
                                                                         <div class="widget-content-left">
@@ -810,7 +812,11 @@
                                         </div>
                                         <div class="widget-content-left  ml-3 header-user-info">
                                             <div class="widget-heading">
-                                                    Alina
+                                                    @if (Auth::guard('web')->check())
+                                                        {{Auth::guard('web')->user()->name }}
+                                                    @else
+                                                        login as admin
+                                                    @endif
                                             </div>
                                             <div class="widget-subheading">
                                                     
@@ -1965,7 +1971,12 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>    <div class="app-main__outer">
+                        </div>   
+                        <div class="app-main__inner">
+                                @yield('content')
+                        </div>
+                        
+                        <div class="app-main__outer">
                             <div class="app-wrapper-footer">
                                 <div class="app-footer">
                                     <div class="app-footer__inner">
@@ -2037,32 +2048,32 @@
                                                                                                     <div class="avatar-wrapper mt-2 avatar-wrapper-overlap">
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/1.jpg"
+                                                                                                                    src="../assets/images/avatars/1.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/2.jpg"
+                                                                                                                    src="../assets/images/avatars/2.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/3.jpg"
+                                                                                                                    src="../assets/images/avatars/3.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/4.jpg"
+                                                                                                                    src="../assets/images/avatars/4.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/5.jpg"
+                                                                                                                    src="../assets/images/avatars/5.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/9.jpg"
+                                                                                                                    src="../assets/images/avatars/9.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
@@ -2072,7 +2083,7 @@
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                             <div class="avatar-icon"><img
-                                                                                                                    src="assets/images/avatars/8.jpg"
+                                                                                                                    src="../assets/images/avatars/8.jpg"
                                                                                                                     alt=""></div>
                                                                                                         </div>
                                                                                                         <div class="avatar-icon-wrapper avatar-icon-sm avatar-icon-add">
@@ -2534,7 +2545,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        {{-- <main class="py-4">
                 <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-md-offset-2">
@@ -2546,7 +2557,7 @@
                         </div>
                     </div>
             @yield('content')
-        </main>
+        </main> --}}
     </div>
 </body>
 

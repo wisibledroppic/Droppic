@@ -12,7 +12,8 @@ class PickerLoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:picker')->except('logout');
+        $this->middleware('guest:picker');
+        //$this->middleware('guest:picker')->except('logout');
     }
 
     public function showPickersLoginForm(){

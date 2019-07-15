@@ -15,7 +15,8 @@ class DropperLoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:dropper')->except('logout');
+        $this->middleware('guest:dropper');
+        //$this->middleware('guest:dropper')->except('logout');
     }
 
     public function showDroppersLoginForm(){
