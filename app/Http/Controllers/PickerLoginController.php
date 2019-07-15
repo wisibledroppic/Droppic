@@ -28,18 +28,19 @@ class PickerLoginController extends Controller
         $this->validate($request,[
             'email'=> 'required|email',
             'password'=> 'required|min:8',
-            'cat' => 'required',
+            //'cat' => 'required',
         ]);
-
-        if(Auth::guard('picker')->attempt(['email'=> $request->email,'password'=>$request->password,'picker_category_id'=>$request->cat],$request->remember)){
+        //$credentials = $request->only('email', 'password','picker_category_id');
+        $credentials = $request->only('email', 'password');
+        if(Auth::guard('picker')->attempt($credentials)){
             //return redirect('droppers/dashboard');
             //$c = PickerCategory::find($request->cat);
             
-            $c = PickerCategory::where('picker_category_id', $request->cat);
+            //$c = PickerCategory::where('picker_category_id', $request->cat);
             return redirect()->intended(route('picker.dashboard'));
         }
         else{
-            return redirect()->back()->withInput($request->only('email','remember','cat'));
+            return redirect()->back()->withInput($request->only('email','remember'));
         }
     }
 }

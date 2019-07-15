@@ -22,7 +22,7 @@ class CreateDroppersTable extends Migration
             $table->string('dcnic');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable()->default('1');
             $table->integer('location_id')->references('location_id')->on('locations')->nullable();
             // $table->integer('status_p');
             // $table->foreign('status_p')->references('status_id')->on('status');

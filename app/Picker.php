@@ -11,10 +11,27 @@ class Picker extends Authenticatable
 {
 
     use Notifiable;
+
     
     protected $table = 'pickers';
-    public $primarykey = 'picker_id';
     protected $guard= 'picker';
+    protected  $primarykey = 'picker_id';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['email',  'password','pname','pcnic','pcontact'];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 
     public function status(){
         return $this->belongsTo('App\Status');

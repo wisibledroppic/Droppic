@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Status extends Model
 {
     public function droppers(){
-        return $this->hasMany('App\Dropper');
+        return $this->hasMany('App\Dropper','status_id');
     }
     public function pickers(){
         return $this->hasMany('App\Picker');

@@ -47,6 +47,13 @@ Route::prefix('pickers')->group(function(){
 });
 
 
+Route::prefix('admin')->group(function(){
+    Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+
+});
+
+
+
 
 
 

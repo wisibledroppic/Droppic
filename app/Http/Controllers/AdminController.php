@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Dropper;
+use App\Picker;
 
-class DropperController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -13,7 +15,7 @@ class DropperController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:dropper');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,7 +25,9 @@ class DropperController extends Controller
      */
     public function index()
     {
-        return view('droppers.dashboard');
+        $droppers = Dropper::all();
+        $pickers = Picker::all();
+        return view('admin.dashboard')->with('droppers',$droppers)->with('pickers',$pickers);
     }
     public function showDroppersProfile(){
         return view('droppers.profile');

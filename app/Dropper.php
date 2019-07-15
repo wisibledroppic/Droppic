@@ -15,6 +15,7 @@ class Dropper extends Authenticatable
     
     protected $table = 'droppers';
     protected $guard= 'dropper'; 
+    protected $primaryKey = 'dropper_id';
 
     /**
      * The attributes that are mass assignable.
@@ -30,7 +31,7 @@ class Dropper extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
-    ];
+    ]; 
 
 
     /**

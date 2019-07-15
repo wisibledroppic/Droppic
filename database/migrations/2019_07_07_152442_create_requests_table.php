@@ -22,7 +22,7 @@ class CreateRequestsTable extends Migration
             $table->string('order_desc');
             $table->float('req_amount');
             $table->integer('picker_id')->references('picker_id')->on('pickers')->nullable();
-            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('request_status_id')->references('request_status_id')->on('request_statuses')->nullable();
             $table->timestamps();
         });
     }
