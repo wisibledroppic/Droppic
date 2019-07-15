@@ -30,7 +30,7 @@ class PickerRegistrationController extends Controller
             'pcnic' => 'required',
             'cat' => 'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ]);
 
         if ($validator->fails()) {

@@ -34,7 +34,7 @@ class DropperRegistrationController extends Controller
             'email' => 'email|required|unique:droppers',
             'dcnic' => 'required',
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ]);
 
         if ($validator->fails()) {
