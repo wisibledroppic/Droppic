@@ -104,6 +104,27 @@ left: 48%;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+/*  ------------------- */
 @-webkit-keyframes sk-foldCubeAngle {
   0%, 10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);
@@ -152,15 +173,15 @@ left: 48%;
 </head>
 
 <body>
-        <div class="spinner-wrapper">
+        {{-- <div class="spinner-wrapper">
                 <div class="sk-folding-cube">
                         <div class="sk-cube1 sk-cube"></div>
                         <div class="sk-cube2 sk-cube"></div>
                         <div class="sk-cube4 sk-cube"></div>
                         <div class="sk-cube3 sk-cube"></div>
                       </div>
-                </div>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+                </div> --}}
+    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar animate-bottom">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
