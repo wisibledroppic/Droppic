@@ -21,7 +21,7 @@ class CreatePickersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('picker_category_id')->references('picker_category_id')->on('picker_categories')->nullable();
-            $table->integer('status_id')->references('status_id')->on('statuses')->nullable();
+            $table->integer('status_id')->references('status_id')->on('statuses')->nullable()->default('1');
             $table->integer('location_id')->references('location_id')->on('locations')->nullable();
             $table->integer('pricing_plan_id')->references('pricing_plan_id')->on('pricing_plans')->nullable();
             $table->timestamps();

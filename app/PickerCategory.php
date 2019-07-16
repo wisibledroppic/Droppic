@@ -10,6 +10,6 @@ class PickerCategory extends Model
     public $primarykey = 'picker_category_id';
     
     public function pickers(){
-        return $this->hasMany('App\Picker'); 
+        return $this->hasMany('App\Picker','picker_category_id','picker_category_id'); 
     }
 }

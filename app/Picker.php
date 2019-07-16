@@ -33,8 +33,8 @@ class Picker extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function status(){
-        return $this->belongsTo('App\Status');
+    public function status(){ 
+        return $this->belongsTo('App\Status','status_id','status_id');
     }
 
     public function location(){
@@ -42,7 +42,7 @@ class Picker extends Authenticatable
     }
 
     public function pricing_plan(){
-        return $this->belongsTo('App\PricingPlan','pricing_plan_id');
+        return $this->belongsTo('App\PricingPlan','pricing_plan_id','pricing_plan_id');
     }
 
     public function billings(){
@@ -57,7 +57,7 @@ class Picker extends Authenticatable
         return $this->hasMany('App\NotificationReceiver');
     }
 
-    public function picker_categories(){
-        return $this->belongsTo('App\PickerCategory','picker_category_id');
+    public function picker_category(){
+        return $this->belongsTo('App\PickerCategory','picker_category_id','picker_category_id');
     }
 }

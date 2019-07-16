@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Status extends Model 
 {
 
     protected  $primarykey = 'status_id';
@@ -13,7 +13,7 @@ class Status extends Model
         return $this->hasMany('App\Dropper','status_id','status_id'); 
     }
     public function pickers(){
-        return $this->hasMany('App\Picker');
+        return $this->hasMany('App\Picker','status_id','status_id');
     }
     
 

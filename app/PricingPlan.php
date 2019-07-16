@@ -12,6 +12,6 @@ class PricingPlan extends Model
 
 
     public function pickers(){
-        return $this->hasMany('App\Picker','pricing_plan_id');
+        return $this->hasMany('App\Picker','pricing_plan_id','pricing_plan_id');
     }
 }

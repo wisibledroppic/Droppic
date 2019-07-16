@@ -94,9 +94,9 @@
                     <td>{{$picker->pcontact}}</td>
                     <td>{{$picker->email}}</td>
                     <td>{{$picker->created_at}}</td>
-                    <td>{{$picker->pricing_plan_id['cat_name']}}</td>
-                    <td>{{$picker->pricing_plan_id['cat_name']}}</td>
-                    <td>{{$picker->picker_category_id['cat_name']}}</td>
+                    <td>{{$picker->pricing_plan['cat_name']}}</td>
+                    <td>{{$picker->status_id}} - {{$picker->status['status_name']}}</td> 
+                    <td>{{$picker->picker_category['cat_name']}}</td>
                 </tr>
                 @endforeach
             </tbody>
