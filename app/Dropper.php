@@ -48,7 +48,7 @@ class Dropper extends Authenticatable
     }
 
     public function status(){
-        return $this->belongsTo('App\Status');
+        return $this->belongsTo('App\Status','status_id','status_id');
     }
 
     public function notification_receivers(){

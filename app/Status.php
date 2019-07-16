@@ -10,7 +10,7 @@ class Status extends Model
     protected  $primarykey = 'status_id';
 
     public function droppers(){
-        return $this->hasMany('App\Dropper','status_id');
+        return $this->hasMany('App\Dropper','status_id','status_id'); 
     }
     public function pickers(){
         return $this->hasMany('App\Picker');

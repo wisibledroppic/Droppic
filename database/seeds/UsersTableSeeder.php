@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+use Carbon\Carbon;
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -15,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'name'     => 'Hamza User',
             'email'    => 'user@gmail.com',
             'password' => Hash::make('hello123'),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
         ]);
 
@@ -22,6 +24,7 @@ class UsersTableSeeder extends Seeder
             'name'     => 'Khalid User',
             'email'    => 'user10@gmail.com',
             'password' => Hash::make('hello123'),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
         ]);
     }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class PickersTableSeeder extends Seeder
 {
@@ -18,7 +19,9 @@ class PickersTableSeeder extends Seeder
             'pcontact' => '+99-999-9999999',
             'picker_category_id'  => '1',
             'pcnic'  => '99999-9999999-9',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'pricing_plan_id' => '1',
+            
     
         ]);
 
@@ -30,6 +33,7 @@ class PickersTableSeeder extends Seeder
             'picker_category_id'  => '2',
             'pcnic'  => '99999-9999999-7',
             'pricing_plan_id' => '1',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
         ]);
     }

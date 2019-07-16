@@ -94,7 +94,7 @@
                     <td>{{$dropper->email}}</td>
                     <td>{{$dropper->created_at}}</td>
                     <td>{{$dropper->davail_hrs}}</td>
-                    <td>{{$dropper->status_id['status_name']}}</td>
+                    <td>{{$dropper->status_id}} - {{$dropper->status['status_name']}}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -103,7 +103,7 @@
                 <tr>
                     <th>Name</th>
                     <th>CNIC</th>
-                    <th>Cell $</th>
+                    <th>Cell Number</th>
                     <th>Email</th>
                     <th>Date Of Registration</th>
                     <th>Availaibility Hours</th>

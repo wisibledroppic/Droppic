@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class DroppersTableSeeder extends Seeder
 {
@@ -18,6 +19,7 @@ class DroppersTableSeeder extends Seeder
             'dcontact' => '+99-999-9999999',
             'davail_hrs'  => '8 AM to 8 PM',
             'dcnic'  => '99999-9999999-9',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
         ]);
         DB::table('droppers')->insert([
@@ -27,6 +29,7 @@ class DroppersTableSeeder extends Seeder
             'dcontact' => '+55-555-5555555',
             'davail_hrs'  => '8 AM to 8 PM',
             'dcnic'  => '55555-5555555-5',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
         ]);
     }
