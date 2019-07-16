@@ -32,4 +32,6 @@ class DropperController extends Controller
     public function editDroppersProfile(){
         return true;
     }
+
+    
 }

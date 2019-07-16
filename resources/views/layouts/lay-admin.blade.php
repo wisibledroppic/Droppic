@@ -815,7 +815,7 @@
                                                     @if (Auth::guard('web')->check())
                                                         {{Auth::guard('web')->user()->name }}
                                                     @else
-                                                        login as admin
+                                                        Guest Admin
                                                     @endif
                                             </div>
                                             <div class="widget-subheading">
@@ -2428,6 +2428,12 @@
                 </div>
                 <div class="drawer-content-wrapper">
                     <div class="scrollbar-container">
+                            @if (Auth::guard('web')->check())
+                            <a href="{{ route('admin.logout') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i class="pe-7s-science btn-icon-wrapper"> </i> Logout Admin  </button></a>
+                        @else
+                        <a href="{{ route('login') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i class="pe-7s-science btn-icon-wrapper"> </i> Login Admin  </button></a>
+                        @endif
+                            
                         <h3 class="drawer-heading">Servers Status</h3>
                         <div class="drawer-section">
                             <div class="divider"></div>

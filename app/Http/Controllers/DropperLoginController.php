@@ -15,8 +15,8 @@ class DropperLoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:dropper');
-        //$this->middleware('guest:dropper')->except('logout');
+        //$this->middleware('guest:dropper');
+        $this->middleware('guest:dropper')->except('logDropperOut');
     }
 
     public function showDroppersLoginForm(){
@@ -44,6 +44,11 @@ class DropperLoginController extends Controller
         else{
             return redirect()->back()->withInput($request->only('email','remember'));
         }
+    }
+
+    public function logDropperOut(){
+        Auth::guard('dropper')->logout();
+        return redirect('droppers/login');
     }
        
 }

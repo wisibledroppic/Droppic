@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Dropper;
 use App\Picker;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -35,5 +36,10 @@ class AdminController extends Controller
 
     public function editDroppersProfile(){
         return true;
+    }
+
+    public function logAdminOut (){
+        Auth::guard('web')->logout();
+        return redirect('login');
     }
 }

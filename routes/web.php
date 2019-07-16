@@ -28,6 +28,8 @@ Route::prefix('droppers')->group(function(){
     Route::get('/login', ['as' => 'dropper.showlogin', 'uses' => 'DropperLoginController@showDroppersLoginForm']);
     Route::post('/login', ['as' => 'dropper.login.submit', 'uses' => 'DropperLoginController@login']);
 
+    Route::get('/logout', ['as' => 'dropper.logout', 'uses' => 'DropperLoginController@logDropperOut']);
+
     Route::get('/profile', ['as' => 'dropper.showProfile', 'uses' => 'DropperController@showDroppersProfile']);
     Route::post('/profile', ['as' => 'dropper.editProfile', 'uses' => 'DropperController@editDroppersProfile']);
 });
@@ -49,6 +51,7 @@ Route::prefix('pickers')->group(function(){
 
 Route::prefix('admin')->group(function(){
     Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+    Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\LoginController@logAdminOut']);
 
 });
 
