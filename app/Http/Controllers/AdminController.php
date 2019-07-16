@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Dropper;
 use App\Picker;
+use App\PricingPlan;
 use Auth;
 
 class AdminController extends Controller
@@ -30,12 +31,23 @@ class AdminController extends Controller
         $pickers = Picker::all();
         return view('admin.dashboard')->with('droppers',$droppers)->with('pickers',$pickers);
     }
-    public function showDroppersProfile(){
-        return view('droppers.profile');
+
+    public function showDroppers()
+    {
+        $droppers = Dropper::all();
+        return view('admin.showDroppers')->with('droppers',$droppers);
     }
 
-    public function editDroppersProfile(){
-        return true;
+
+    public function showPickers()
+    {
+        $pickers = Picker::all();
+        return view('admin.showPickers')->with('pickers',$pickers);
+    }
+
+    public function pricingPlans(){
+        $pricingplans = PricingPlan::all();
+        return view('admin.pricing-plans')->with('pricingplans',$pricingplans);
     }
 
     public function logAdminOut (){

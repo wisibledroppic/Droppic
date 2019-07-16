@@ -42,7 +42,7 @@ class Picker extends Authenticatable
     }
 
     public function pricing_plan(){
-        return $this->belongsTo('App\PricingPlan');
+        return $this->belongsTo('App\PricingPlan','pricing_plan_id');
     }
 
     public function billings(){
@@ -58,6 +58,6 @@ class Picker extends Authenticatable
     }
 
     public function picker_categories(){
-        return $this->belongsTo('App\PickerCategory');
+        return $this->belongsTo('App\PickerCategory','picker_category_id');
     }
 }

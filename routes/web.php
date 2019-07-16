@@ -51,7 +51,11 @@ Route::prefix('pickers')->group(function(){
 
 Route::prefix('admin')->group(function(){
     Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+    Route::get('/droppers/list', ['as' => 'admin.showDroppers', 'uses' => 'AdminController@showDroppers']);
+    Route::get('/pickers/list', ['as' => 'admin.showPickers', 'uses' => 'AdminController@showPickers']);
     Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\LoginController@logAdminOut']);
+    Route::get('/pricingplans', ['as' => 'admin.pricingPlans', 'uses' => 'AdminController@pricingPlans']);
+    
 
 });
 

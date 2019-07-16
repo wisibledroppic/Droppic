@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Status extends Model
 {
+
+    protected  $primarykey = 'status_id';
+
     public function droppers(){
         return $this->hasMany('App\Dropper','status_id');
     }

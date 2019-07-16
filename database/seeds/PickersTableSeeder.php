@@ -18,6 +18,18 @@ class PickersTableSeeder extends Seeder
             'pcontact' => '+99-999-9999999',
             'picker_category_id'  => '1',
             'pcnic'  => '99999-9999999-9',
+            'pricing_plan_id' => '1',
+    
+        ]);
+
+        DB::table('pickers')->insert([
+            'pname'     => 'Basit Ali',
+            'email'    => 'yousuf@gmail.com',
+            'password' => Hash::make('hello123'),
+            'pcontact' => '+89-999-9999999',
+            'picker_category_id'  => '2',
+            'pcnic'  => '99999-9999999-7',
+            'pricing_plan_id' => '1',
     
         ]);
     }
