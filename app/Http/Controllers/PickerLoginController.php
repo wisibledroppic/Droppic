@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\PickerCategory;
 use Auth;
 
+use App\Picker;
+
 class PickerLoginController extends Controller
 {
 
@@ -18,11 +20,10 @@ class PickerLoginController extends Controller
 
     public function showPickersLoginForm(){
         //return view ('pages.home')->with('news',$news);
-        $cats = PickerCategory::all();
         //echo ($cats);
         // $players= Player::orderBy('ratings','desc')->paginate(15);
         // return view ('players.index')->with(['players' => $players])->with('teams',$teams);
-        return view ('pickers.login')->with('cats',$cats);
+        return view ('pickers.login');
     }
 
     public function login(Request $request){
