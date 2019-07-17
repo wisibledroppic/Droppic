@@ -649,49 +649,50 @@
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/1.jpg"
+                                                                                        
+                                                                                            src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/2.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/2.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/3.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/3.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/4.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/4.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/5.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/5.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/9.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/9.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/7.jpg"
+                                                                                            src{{ asset('assets/images/avatars/7.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="../assets/images/avatars/8.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/8.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
@@ -1061,7 +1062,7 @@
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                             class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="../assets/images/avatars/1.jpg"
+                                            <img width="42" class="rounded-circle" src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                 alt="">
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
@@ -1077,7 +1078,7 @@
                                                             <div class="widget-content-wrapper">
                                                                 <div class="widget-content-left mr-3">
                                                                     <img width="42" class="rounded-circle"
-                                                                        src="../assets/images/avatars/1.jpg" alt="">
+                                                                        src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
                                                                 </div>
                                                                 <div class="widget-content-left">
                                                                     <div class="widget-heading">Alina Mcloughlin
@@ -2250,56 +2251,56 @@
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/1.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/2.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/2.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/3.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/3.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/4.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/4.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/5.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/5.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/9.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/9.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/7.jpg"
+                                                                                                    <img src=".{{ asset('assets/images/avatars/7.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="../assets/images/avatars/8.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/8.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
