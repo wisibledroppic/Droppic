@@ -4,19 +4,26 @@
 
 <div class="card-body">
     <h5 class="card-title">Dropper's Profile</h5>
-    <form class="">
+    <form method="POST" action="{{ route('dropper.editProfile') }}">
+            @csrf
         <div class="form-row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="position-relative form-group"><label for="dname" class="">Name</label><input name="dname"
-                        id="dname" placeholder="" type="text" class="form-control"></div>
+                        id="dname" placeholder="" required value={{$dropper->dname}} type="text" class="form-control"></div>
             </div>
-            <div class="col-md-4">
-                <div class="position-relative form-group"><label for="dcnic" class="">CNIC #</label><input name="dcnic"
-                        id="dcnic" placeholder="" type="text" class="form-control"></div>
+            <div class="col-md-6">
+                <div class="position-relative form-group"><label for="email" class="">Email</label><input name="email"
+                        id="email" placeholder=""  required disabled value={{$dropper->email}} type="email" class="form-control"></div>
             </div>
-            <div class="col-md-4">
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
                 <div class="position-relative form-group"><label for="dcontact" class="">Contact</label><input
-                        name="dcontact" id="dcontact" placeholder="" type="text" class="form-control"></div>
+                        name="dcontact" id="dcontact" required placeholder="" value={{$dropper->dcontact}} type="text" class="form-control"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="position-relative form-group"><label for="dcnic" class="">CNIC #</label><input name="dcnic"
+                        id="dcnic" placeholder="" required value={{$dropper->dcnic}} type="text" class="form-control"></div>
             </div>
         </div>
         <div class="form-row">
@@ -24,8 +31,8 @@
         </div>
         <div class="form-row">
             <div class="col-md-6 ">
-                <label for="davail_hrs1" class=""> FROM </label>
-                <input name="davail_hrs1" id="timepicker1" width="276" class="form-control" />
+                <label for="hrs_from" class=""> FROM </label>
+                <input name="hrs_from"  value={{$dropper->hrs_from}} required id="timepicker1" width="276" class="form-control" />
                 <script>
                     $('#timepicker1').timepicker({
                         uiLibrary: 'bootstrap4'
@@ -33,8 +40,8 @@
                 </script>
             </div>
             <div class="col-md-6">
-                <label for="davail_hrs2" class=""> TO </label>
-                <input name="davail_hrs2" id="timepicker" width="276" class="form-control" />
+                <label for="hrs_to" class=""> TO </label>
+                <input name="hrs_to" required value={{$dropper->hrs_to}} id="timepicker" width="276" class="form-control" />
                 <script>
                     $('#timepicker').timepicker({
                         uiLibrary: 'bootstrap4'
@@ -63,9 +70,10 @@
                         id="exampleZip" type="text" class="form-control"></div>
             </div>
         </div>
-        <div class="position-relative form-check"><input name="check" id="exampleCheck" type="checkbox"
-                class="form-check-input"><label for="exampleCheck" class="form-check-label">Check me out</label></div>
-        <button class="mt-2 btn btn-primary">Update Profile</button>
+        <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Update Profile
+            </button>
+        
     </form>
 </div>
 

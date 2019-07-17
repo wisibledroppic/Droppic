@@ -36,6 +36,7 @@
 </head>
 
 <body>
+        
     <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
@@ -2096,6 +2097,27 @@
                     </div>
                 </div> --}}
                 <div class="app-main__inner">
+                        @if(Session::has('flash_success'))
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_success') !!}</strong>
+                        </div>
+                        @endif
+                
+
+                        @if(Session::has('flash_info'))
+                        <div class="alert alert-info alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_info') !!}</strong>
+                        </div>
+                        @endif
+
+                        @if(Session::has('flash_danger'))
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_danger') !!}</strong>
+                        </div>
+                        @endif
                     @yield('content')
                 </div>
 
@@ -2853,3 +2875,23 @@
 </body>
 
 </html>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">Are you sure to update your profile?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>

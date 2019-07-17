@@ -7,6 +7,7 @@ use App\Dropper;
 use App\Picker;
 use App\PricingPlan;
 use Auth;
+use Session;
 
 class AdminController extends Controller
 {
@@ -53,5 +54,14 @@ class AdminController extends Controller
     public function logAdminOut (){
         Auth::guard('web')->logout();
         return redirect('login');
+    }
+    public function createPricingPlan(Request $request){
+        
+        $pricingplan = new PricingPlan ();
+        $pricingplan->cat_name = $request->get ( 'name' );
+        $pricingplan->amount_per_month= $request->get ( 'amount' );
+        $pricingplan->save ();
+        Session::flash('flash_success','New pricing Plan Added');
+        return redirect()->intended(route('admin.pricingPlans'));
     }
 }

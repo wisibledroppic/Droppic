@@ -19,6 +19,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -2138,6 +2139,27 @@
                     </div>
                 </div> --}}
                 <div class="app-main__inner">
+                        @if(Session::has('flash_success'))
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_success') !!}</strong>
+                        </div>
+                        @endif
+                
+
+                        @if(Session::has('flash_info'))
+                        <div class="alert alert-info alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_info') !!}</strong>
+                        </div>
+                        @endif
+
+                        @if(Session::has('flash_danger'))
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_danger') !!}</strong>
+                        </div>
+                        @endif
                     @yield('content')
                 </div>
 
@@ -2895,3 +2917,32 @@
 </body>
 
 </html>
+
+<div id="pricing-plan-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+                <strong>Add Pricing Plan</strong>
+          <a class="close" data-dismiss="modal">×</a>
+          
+        </div>
+        <form method="POST" action="{{ route('admin.createPlan') }}" id="pricingPlanForm" name="addplan" role="form">
+            @csrf
+          <div class="modal-body">				
+            <div class="form-group">
+              <label for="name">Plan Name</label>
+              <input type="text" required name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount per Month</label>
+              <input type="number" required name="amount" class="form-control">
+            </div>					
+          </div>
+          <div class="modal-footer">					
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-success" id="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

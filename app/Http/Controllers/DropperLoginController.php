@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
-
+use Session;
 use App\Dropper;
 
 
@@ -39,6 +39,7 @@ class DropperLoginController extends Controller
             //return redirect('droppers/dashboard');
             // $dropper = Dropper::where('email', $request->email)->first();
             // Auth::guard('dropper')->login($dropper);
+            Session::flash('flash_success','You have been Logged in. Welcome back '.Auth::guard('dropper')->user()->dname.'.');
             return redirect()->intended(route('dropper.dashboard')); 
         }
         else{
@@ -48,6 +49,7 @@ class DropperLoginController extends Controller
 
     public function logDropperOut(){
         Auth::guard('dropper')->logout();
+        Session::flash('flash_info','You have been Logged out.');
         return redirect('droppers/login');
     }
        

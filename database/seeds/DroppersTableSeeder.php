@@ -17,7 +17,8 @@ class DroppersTableSeeder extends Seeder
             'email'    => 'basitalikhatri98@gmail.com',
             'password' => Hash::make('hello123'),
             'dcontact' => '+99-999-9999999',
-            'davail_hrs'  => '8 AM to 8 PM',
+            'hrs_from'  => '8:45',
+            'hrs_to'  => '18:45',
             'dcnic'  => '99999-9999999-9',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     
@@ -27,7 +28,8 @@ class DroppersTableSeeder extends Seeder
             'email'    => 'mushtaqahmed@gmail.com',
             'password' => Hash::make('hello123'),
             'dcontact' => '+55-555-5555555',
-            'davail_hrs'  => '8 AM to 8 PM',
+            'hrs_from'  => '7:45',
+            'hrs_to'  => '17:50',
             'dcnic'  => '55555-5555555-5',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
     

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Session;
 
 use App\Dropper;
 
@@ -49,6 +50,7 @@ class DropperRegistrationController extends Controller
         $dropper->password = Hash::make ( $request->get ( 'password' ) );
         //$dropper->password =( $request->get ( 'password' ) );
         $dropper->save ();
+        Session::flash('flash_success','Welcome to Droppic '.Auth::guard('dropper')->user()->dname.'Your account has been created and you are logged in.');
         return redirect()->intended(route('dropper.dashboard'));
     }
 }

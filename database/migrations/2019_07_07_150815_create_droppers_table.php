@@ -18,7 +18,8 @@ class CreateDroppersTable extends Migration
             $table->string('dname');
             $table->string('email')->unique();
             $table->string('dcontact')->unique();
-            $table->string('davail_hrs')->nullable();
+            $table->string('hrs_from')->nullable();
+            $table->string('hrs_to')->nullable();
             $table->string('dcnic');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

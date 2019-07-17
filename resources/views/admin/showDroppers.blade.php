@@ -93,7 +93,7 @@
                     <td>{{$dropper->dcontact}}</td>
                     <td>{{$dropper->email}}</td>
                     <td>{{$dropper->created_at}}</td>
-                    <td>{{$dropper->davail_hrs}}</td>
+                    <td>{{$dropper->hrs_from}} - {{$dropper->hrs_to}}</td>
                     <td>{{$dropper->status_id}} - {{$dropper->status['status_name']}}</td>
                 </tr>
                 @endforeach
