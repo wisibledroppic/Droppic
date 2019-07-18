@@ -12,6 +12,10 @@ class PickersTableSeeder extends Seeder
      */
     public function run()
     {
+
+
+        factory(App\Picker::class, 50)->create();
+
         DB::table('pickers')->insert([
             'pname'     => 'Basit Ali',
             'email'    => 'basitalikhatri@gmail.com',
@@ -26,7 +30,7 @@ class PickersTableSeeder extends Seeder
         ]);
 
         DB::table('pickers')->insert([
-            'pname'     => 'Basit Ali',
+            'pname'     => 'Muhammad Yousuf',
             'email'    => 'yousuf@gmail.com',
             'password' => Hash::make('hello123'),
             'pcontact' => '+89-999-9999999',

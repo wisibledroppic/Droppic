@@ -12,6 +12,9 @@ class DroppersTableSeeder extends Seeder
      */
     public function run()
     {
+
+        factory(App\Dropper::class, 50)->create();
+
         DB::table('droppers')->insert([
             'dname'     => 'Basit Ali',
             'email'    => 'basitalikhatri98@gmail.com',
