@@ -18,14 +18,20 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login', 'DropperLoginController@showDroppersLoginForm');
+Route::get('/registration','DropperRegistrationController@showDroppersResgistrationForm');
+
+Route::get('dashboard', function (){
+    return view('layouts/app');
+});
 
 Route::prefix('droppers')->group(function(){
     Route::get('/dashboard', ['as' => 'dropper.dashboard', 'uses' => 'DropperController@index']);
 
     Route::get('/registration', ['as' => 'dropper.registration', 'uses' => 'DropperRegistrationController@showDroppersResgistrationForm']);
     Route::post('/registration', ['as' => 'dropper.createregistration', 'uses' => 'DropperRegistrationController@registerDropper']);
-    
-    Route::get('/login', ['as' => 'dropper.showlogin', 'uses' => 'DropperLoginController@showDroppersLoginForm']);
+
+
     Route::post('/login', ['as' => 'dropper.login.submit', 'uses' => 'DropperLoginController@login']);
 
     Route::get('/logout', ['as' => 'dropper.logout', 'uses' => 'DropperLoginController@logDropperOut']);

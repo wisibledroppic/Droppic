@@ -1,4 +1,5 @@
-@extends('layouts.lay-picker')
+{{--@extends('layouts.lay-picker')--}}
+@extends('layouts.app')
 
 @section('content')
 <div class="container">

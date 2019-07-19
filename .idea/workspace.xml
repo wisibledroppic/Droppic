@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="892ca7f9-c123-465a-aeb5-1d2e3b52de41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Login/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Login/registration.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/flash-messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DropperLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DropperLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DropperRegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DropperRegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/AZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/BZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/CZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/DZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/EC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/EE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/EG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ER.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ES.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ET.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/EU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/FR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB-ENG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB-NIR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB-SCT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB-WLS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB-ZET.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/GY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/HU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ID.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/IT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/JE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/JM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/JO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/JP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/KZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LGBT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/LY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Linearicons-Free.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Linearicons-Free.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Linearicons-Free.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Linearicons-Free.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Linearicons-Free.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ME.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ML.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/MZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NP.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/NZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/OM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/PY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Pe-icon-7-stroke.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Pe-icon-7-stroke.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Pe-icon-7-stroke.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/Pe-icon-7-stroke.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/QA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/RE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/RO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/RS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/RU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/RW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SB.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ST.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SX.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/SZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TD.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TH.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TJ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TL.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TO.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TR.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TV.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/TZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/UA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/UG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/UM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/US-CA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/US.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/UY.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/UZ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VC.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VG.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VI.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VN.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/VU.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/WF.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/WS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/XK.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/YE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/YT.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ZA.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ZM.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ZW.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/avatars/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/abstract9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/city1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/city2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/city3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/city4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/dropdown-header/city5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/icons-rtl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo-droppic-full.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/abstract6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/buildings.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/citydark.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/citynights.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/colors.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/fence-small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/fence.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/interconnected.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/nightcolors.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/originals/water.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/abstract9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/city1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/city2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/city3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/city4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sidebar/city5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/vline-rtl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/vline.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scripts/main.8d288f825d8dffbbe55e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scripts/main.8d288f825d8dffbbe55e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pickers/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pickers/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pickers/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-247177460">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="3" />
+          <entry key="jpg" value="1" />
+          <entry key="php" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Blade" value="13" />
+          <entry key="Image" value="1" />
+          <entry key="PHP" value="3" />
+          <entry key="Svelte" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="469" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Blade" value="357" />
+          <entry key="PHP" value="112" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="535" column="23" lean-forward="true" selection-start-line="535" selection-start-column="23" selection-end-line="535" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10143">
+              <caret line="441" column="6" selection-start-line="441" selection-start-column="6" selection-end-line="441" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="943">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Login/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1426">
+              <caret line="62" column="132" selection-start-line="62" selection-start-column="130" selection-end-line="62" selection-end-column="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Login/registration.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/architectui-html-pro-theme-package/architectui-html-pro-theme/architectui-html-pro/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102580">
+              <caret line="4460" column="69" selection-start-line="4460" selection-start-column="69" selection-end-line="4460" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>file tr</find>
+      <find>app</find>
+      <find>form</find>
+      <find>login</find>
+      <find>asset</find>
+      <find>hre</find>
+      <find>slick</find>
+      <find>button</find>
+      <find>butto</find>
+      <find>app-logo</find>
+      <find>app-header</find>
+      <find>app-side</find>
+      <find>app-wra</find>
+      <find>href</find>
+      <find>asse</find>
+      <find>incl</find>
+      <find>src</find>
+      <find>i</find>
+      <find>&lt;i</find>
+      <find>pe-</find>
+      <find>script</find>
+      <find>avatars</find>
+      <find>URL</find>
+      <find>card mb</find>
+      <find>droppi</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/resources/views/layouts/previousApp.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pickers/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DropperLoginController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/Login/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Login/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Login/registration.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DropperRegistrationController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/header.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/anhskohbo/no-captcha" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="100" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="860" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Droppic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Droppic" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/architectui-html-pro-theme-package/architectui-html-pro-theme/architectui-html-pro/pages-register.html" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Droppic\resources\views" />
+      <recent name="C:\xampp\htdocs\Droppic\resources\views\layouts\Login" />
+      <recent name="C:\xampp\htdocs\Droppic\public\assets" />
+      <recent name="C:\xampp\htdocs\Droppic\resources\views\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Droppic\resources\views\layouts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="892ca7f9-c123-465a-aeb5-1d2e3b52de41" name="Default Changelist" comment="" />
+      <created>1563357942772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563357942772</updated>
+      <workItem from="1563357945236" duration="5577000" />
+      <workItem from="1563428808722" duration="5917000" />
+      <workItem from="1563452561371" duration="3998000" />
+      <workItem from="1563517776879" duration="6488000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21980000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.25899744" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.78125" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/lay-picker.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DropperLoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/architectui-html-pro-theme-package/architectui-html-pro-theme/architectui-html-pro/pages-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="52" column="48" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/previousApp.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58719">
+          <caret line="2553" selection-start-line="2553" selection-end-line="2553" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/lay-admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/architectui-html-pro-theme-package/architectui-html-pro-theme/architectui-html-pro/pages-register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DropperRegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pickers/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10143">
+          <caret line="441" column="6" selection-start-line="441" selection-start-column="6" selection-end-line="441" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Login/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="62" column="132" selection-start-line="62" selection-start-column="130" selection-end-line="62" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Login/registration.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="72" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/architectui-html-pro-theme-package/architectui-html-pro-theme/architectui-html-pro/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102580">
+          <caret line="4460" column="69" selection-start-line="4460" selection-start-column="69" selection-end-line="4460" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/avatars/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="535" column="23" lean-forward="true" selection-start-line="535" selection-start-column="23" selection-end-line="535" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

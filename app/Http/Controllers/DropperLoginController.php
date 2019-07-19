@@ -7,9 +7,6 @@ use Auth;
 
 use App\Dropper;
 
-
-
-
 class DropperLoginController extends Controller
 {
 
@@ -21,7 +18,7 @@ class DropperLoginController extends Controller
 
     public function showDroppersLoginForm(){
         //return view ('pages.home')->with('news',$news);
-        return view ('droppers.login');
+        return view('Login/login');
     }
 
     public function login(Request $request){

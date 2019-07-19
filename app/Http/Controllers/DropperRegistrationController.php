@@ -24,7 +24,7 @@ class DropperRegistrationController extends Controller
     
     public function showDroppersResgistrationForm(){
         //return view ('pages.home')->with('news',$news);
-        return view ('droppers.registration');
+        return view ('Login/registration');
     }
 
     public function registerDropper(Request $request){
