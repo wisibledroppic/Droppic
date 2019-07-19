@@ -56,8 +56,11 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\LoginController@logAdminOut']);
     Route::get('/pricingplans', ['as' => 'admin.pricingPlans', 'uses' => 'AdminController@pricingPlans']);
     Route::post('/addpricingplans', ['as' => 'admin.createPlan', 'uses' => 'AdminController@createPricingPlan']);
-    
+    Route::get('/banks', ['as' => 'admin.showBanks', 'uses' => 'BankCsv@index']); 
+    Route::post('/banks', ['as' => 'admin.importBanks', 'uses' => 'BankCsv@bankCsvImport']); 
 });
+
+
 
 
 

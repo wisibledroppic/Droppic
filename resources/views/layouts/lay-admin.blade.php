@@ -2013,6 +2013,12 @@
                                     </i>Pricing Plans
                                 </a>
                             </li>
+                            <li>
+                                    <a href="{{ route('admin.showBanks') }}">
+                                        <i class="metismenu-icon pe-7s-ball">
+                                        </i>Banks
+                                    </a>
+                                </li>
                             <li class="app-sidebar__heading">Forms</li>
                             <li>
                                 <a href="#">
