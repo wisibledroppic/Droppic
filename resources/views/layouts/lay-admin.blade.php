@@ -18,6 +18,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/pace.min.js') }}"></script>
     <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
 
@@ -35,6 +36,29 @@
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <style>
+        .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #fe0101;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
         .pt-3-half {
             padding-top: 1.4rem;
         }
@@ -214,14 +238,14 @@
 </head>
 
 <body>
-    <div class="spinner-wrapper">
+    {{-- <div class="spinner-wrapper">
         <div class="sk-folding-cube">
             <div class="sk-cube1 sk-cube"></div>
             <div class="sk-cube2 sk-cube"></div>
             <div class="sk-cube4 sk-cube"></div>
             <div class="sk-cube3 sk-cube"></div>
         </div>
-    </div>
+    </div> --}}
     <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
@@ -650,7 +674,7 @@
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                        
+
                                                                                             src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
@@ -2151,7 +2175,7 @@
                             <strong>{!! session('flash_success') !!}</strong>
                         </div>
                         @endif
-                
+
 
                         @if(Session::has('flash_info'))
                         <div class="alert alert-info alert-dismissible">
@@ -2930,11 +2954,11 @@
         <div class="modal-header">
                 <strong>Add Pricing Plan</strong>
           <a class="close" data-dismiss="modal">×</a>
-          
+
         </div>
         <form method="POST" action="{{ route('admin.createPlan') }}" id="pricingPlanForm" name="addplan" role="form">
             @csrf
-          <div class="modal-body">				
+          <div class="modal-body">
             <div class="form-group">
               <label for="name">Plan Name</label>
               <input type="text" required name="name" class="form-control">
@@ -2942,9 +2966,9 @@
             <div class="form-group">
               <label for="amount">Amount per Month</label>
               <input type="number" required name="amount" class="form-control">
-            </div>					
+            </div>
           </div>
-          <div class="modal-footer">					
+          <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <input type="submit" class="btn btn-success" id="submit">
           </div>
