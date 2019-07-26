@@ -12,10 +12,10 @@ class Picker extends Authenticatable
 
     use Notifiable;
 
-    
+
     protected $table = 'pickers';
     protected $guard= 'picker';
-    protected  $primarykey = 'picker_id';
+    protected  $primaryKey = 'picker_id';
 
     /**
      * The attributes that are mass assignable.
@@ -33,7 +33,7 @@ class Picker extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function status(){ 
+    public function status(){
         return $this->belongsTo('App\Status','status_id','status_id');
     }
 

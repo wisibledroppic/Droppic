@@ -24,7 +24,7 @@ Route::prefix('droppers')->group(function(){
 
     Route::get('/registration', ['as' => 'dropper.registration', 'uses' => 'DropperRegistrationController@showDroppersResgistrationForm']);
     Route::post('/registration', ['as' => 'dropper.createregistration', 'uses' => 'DropperRegistrationController@registerDropper']);
-    
+
     Route::get('/login', ['as' => 'dropper.showlogin', 'uses' => 'DropperLoginController@showDroppersLoginForm']);
     Route::post('/login', ['as' => 'dropper.login.submit', 'uses' => 'DropperLoginController@login']);
 
@@ -40,7 +40,7 @@ Route::prefix('pickers')->group(function(){
 
     Route::get('/registration', ['as' => 'picker.registration', 'uses' => 'PickerRegistrationController@showPickersResgistrationForm']);
     Route::post('/registration', ['as' => 'picker.createregistration', 'uses' => 'PickerRegistrationController@registerPicker']);
-    
+
     Route::get('/login', ['as' => 'picker.showlogin', 'uses' => 'PickerLoginController@showPickersLoginForm']);
     Route::post('/login', ['as' => 'picker.login.submit', 'uses' => 'PickerLoginController@login']);
 
@@ -56,8 +56,8 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\LoginController@logAdminOut']);
     Route::get('/pricingplans', ['as' => 'admin.pricingPlans', 'uses' => 'AdminController@pricingPlans']);
     Route::post('/addpricingplans', ['as' => 'admin.createPlan', 'uses' => 'AdminController@createPricingPlan']);
-    Route::get('/banks', ['as' => 'admin.showBanks', 'uses' => 'BankCsv@index']); 
-    Route::post('/banks', ['as' => 'admin.importBanks', 'uses' => 'BankCsv@bankCsvImport']); 
+    Route::get('/banks', ['as' => 'admin.showBanks', 'uses' => 'BankCsv@index']);
+    Route::post('/banks', ['as' => 'admin.importBanks', 'uses' => 'BankCsv@bankCsvImport']);
 });
 
 
@@ -67,3 +67,8 @@ Route::prefix('admin')->group(function(){
 
 
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

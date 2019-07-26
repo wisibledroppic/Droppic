@@ -2038,7 +2038,7 @@
                                 </a>
                             </li>
                             <li>
-                                    <a href="{{ route('admin.showBanks') }}">
+                                    <a href="{{ route('admin.pricingPlans') }}">
                                         <i class="metismenu-icon pe-7s-ball">
                                         </i>Banks
                                     </a>

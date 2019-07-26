@@ -8,7 +8,7 @@ class PricingPlan extends Model
 {
 
     protected $table = 'pricing_plans';
-    protected  $primarykey = 'pricing_plan_id';
+    protected  $primaryKey = 'pricing_plan_id';
 
 
     public function pickers(){

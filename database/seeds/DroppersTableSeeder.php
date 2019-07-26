@@ -13,7 +13,7 @@ class DroppersTableSeeder extends Seeder
     public function run()
     {
 
-        factory(App\Dropper::class, 50)->create();
+
 
         DB::table('droppers')->insert([
             'dname'     => 'Basit Ali',
@@ -24,7 +24,7 @@ class DroppersTableSeeder extends Seeder
             'hrs_to'  => '18:45',
             'dcnic'  => '99999-9999999-9',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    
+
         ]);
         DB::table('droppers')->insert([
             'dname'     => 'Mushtaq Ahmed',
@@ -35,7 +35,9 @@ class DroppersTableSeeder extends Seeder
             'hrs_to'  => '17:50',
             'dcnic'  => '55555-5555555-5',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    
+
         ]);
+
+        factory(App\Dropper::class, 50)->create();
     }
 }

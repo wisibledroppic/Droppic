@@ -69,7 +69,7 @@
                 <a href="{{ route('dropper.showlogin') }}">Dropper</a>
                 {{-- <a href="{{ route('picker.showlogin') }}">Picker</a> --}}
                 <a href="{{ route('picker.showlogin') }}">Picker</a>
-                <a href="{{ route('admin.dashboard') }}">Admin</a>
+                <a href="{{ route('voyager.dashboard') }}">Admin</a>
             </div>
             {{-- @if (Route::has('login'))
                 <div class="top-right links">
@@ -86,6 +86,7 @@
             @endif --}}
 
             <div class="content">
+                    <img src="{{Voyager::image (setting('site.logo'))}}" alt="Droppic Logo" width="400px" height="400px">
                 <div class="title m-b-md">
                     Droppic
                 </div>

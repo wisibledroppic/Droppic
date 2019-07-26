@@ -12,21 +12,21 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
         DB::table('users')->insert([
-            'name'     => 'Hamza User',
-            'email'    => 'user@gmail.com',
+            'name'     => 'Hamza Admin',
+            'email'    => 'admin1@gmail.com',
             'password' => Hash::make('hello123'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    
+
         ]);
 
         DB::table('users')->insert([
-            'name'     => 'Khalid User',
-            'email'    => 'user10@gmail.com',
+            'name'     => 'Khalid Admin',
+            'email'    => 'admin2@gmail.com',
             'password' => Hash::make('hello123'),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-    
+
         ]);
     }
 
