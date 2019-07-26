@@ -22,6 +22,32 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}">
 
+    <style>
+    .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #5aadc7;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+    </style>
+
     @yield('css')
     @if(config('voyager.multilingual.rtl'))
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css">
@@ -44,7 +70,7 @@
             color:{{ config('voyager.primary_color','#22A7F0') }};
         }
     </style>
-
+<script src="{{ asset('js/pace.min.js') }}"></script>
     @if(!empty(config('voyager.additional_css')))<!-- Additional CSS -->
         @foreach(config('voyager.additional_css') as $css)<link rel="stylesheet" type="text/css" href="{{ asset($css) }}">@endforeach
     @endif

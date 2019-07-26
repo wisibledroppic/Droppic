@@ -23,6 +23,7 @@ class DroppersTableSeeder extends Seeder
             'hrs_from'  => '8:45',
             'hrs_to'  => '18:45',
             'dcnic'  => '99999-9999999-9',
+            'profile_image' => 'users/default.png',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
 
         ]);
@@ -34,6 +35,7 @@ class DroppersTableSeeder extends Seeder
             'hrs_from'  => '7:45',
             'hrs_to'  => '17:50',
             'dcnic'  => '55555-5555555-5',
+            'profile_image' => 'users/default.png',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
 
         ]);

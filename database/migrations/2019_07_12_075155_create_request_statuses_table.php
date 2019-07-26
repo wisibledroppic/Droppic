@@ -15,7 +15,6 @@ class CreateRequestStatusesTable extends Migration
     {
         Schema::create('request_statuses', function (Blueprint $table) {
             $table->bigIncrements('request_status_id');
-            $table->integer('request_status_code');
             $table->string('request_status_name');
             $table->string('request_status_description');
             $table->timestamps();

@@ -16,5 +16,6 @@ $factory->define(Dropper::class, function (Faker $faker) {
         'hrs_from'  => '8:45',
         'hrs_to'  => '18:45',
         'dcnic' => Str::random(15),
+        'profile_image' => 'users/default.png',
     ];
 });
