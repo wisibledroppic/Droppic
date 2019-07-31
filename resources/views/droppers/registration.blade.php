@@ -60,7 +60,7 @@
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Contact</label><input name="dcontact" id="dcontact" value="{{ old('dcontact') }}" required
                                                 autocomplete="dcontact" placeholder="Your Cell"
-                                                class="form-control input-mask-trigger @error('dcontact') is-invalid @enderror" data-inputmask="'mask': '+[99-]999-9999999'" im-insert="true">
+                                                class="form-control input-mask-trigger @error('dcontact') is-invalid @enderror" data-inputmask="'mask': '9999-9999999'" im-insert="true">
                                                 @error('dcontact')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

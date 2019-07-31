@@ -14,6 +14,7 @@ $factory->define(Picker::class, function (Faker $faker) {
         'pcontact' => Str::random(15),
         'pcnic' => Str::random(15),
         'picker_category_id'  => '1',
+        'profile_image' => 'users/default.png',
         'pricing_plan_id' => '1',
     ];
 });

@@ -17,7 +17,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <script src="{{ asset('js/pace.min.js') }}"></script>
     <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('css/main.8d288f825d8dffbbe55e.css') }}" rel="stylesheet">
 
 
@@ -1085,12 +1085,14 @@
                             <div class="widget-content-wrapper">
                                 <div class="widget-content-left">
                                     <div class="btn-group">
+                                        @if (Auth::guard('picker')->check())
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="{{ asset('assets/images/avatars/1.jpg') }}"
-                                                alt="">
-                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                                        </a>
+                                        class="p-0 btn">
+                                        <img width="42" class="rounded-circle" src="{{ URL::asset('storage/'. Auth::guard('picker')->user()->profile_image ) }}"
+                                            alt="">
+                                        <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                    </a>
+                                        @endif
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
                                             <div class="dropdown-menu-header">
@@ -1101,21 +1103,27 @@
                                                     <div class="menu-header-content text-left">
                                                         <div class="widget-content p-0">
                                                             <div class="widget-content-wrapper">
+                                                                @if (Auth::guard('picker')->check())
                                                                 <div class="widget-content-left mr-3">
                                                                     <img width="42" class="rounded-circle"
-                                                                        src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
+                                                                    src="{{ URL::asset('storage/'. Auth::guard('picker')->user()->profile_image ) }}" alt="Pickers Image">
                                                                 </div>
+                                                                @endif
                                                                 <div class="widget-content-left">
-                                                                    <div class="widget-heading">Alina Mcloughlin
+                                                                        @if (Auth::guard('picker')->check())
+
+                                                                    <div class="widget-heading">{{Auth::guard('picker')->user()->pname }}
                                                                     </div>
-                                                                    <div class="widget-subheading opacity-8">A short
-                                                                        profile description
+                                                                    <div class="widget-subheading opacity-8">{{Auth::guard('picker')->user()->pcnic }}
                                                                     </div>
+                                                                    @endif
                                                                 </div>
                                                                 <div class="widget-content-right mr-2">
+                                                                        <a href="{{ route('picker.logout') }}">
                                                                     <button
                                                                         class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
                                                                     </button>
+                                                                    </a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1198,8 +1206,8 @@
                                     <div class="widget-heading">
                                         @if (Auth::guard('picker')->check())
                                         {{Auth::guard('picker')->user()->pname }}
-                                        @else
-                                        login as Picker
+                                        {{-- @else
+                                        login as Picker --}}
                                         @endif
                                     </div>
                                     <div class="widget-subheading">
@@ -1788,7 +1796,7 @@
                 <div class="scrollbar-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
-                            <li class="app-sidebar__heading">Droppers</li>
+                            <li class="app-sidebar__heading">Dum</li>
                             <li class="">
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-rocket"></i>
@@ -2106,11 +2114,11 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="app-sidebar__heading">Charts</li>
+                            <li class="app-sidebar__heading">Requests</li>
                             <li>
                                 <a href="charts-chartjs.html">
                                     <i class="metismenu-icon pe-7s-graph2">
-                                    </i>ChartJS
+                                    </i>Add Request
                                 </a>
                             </li>
                             <li>
@@ -2865,7 +2873,7 @@
                 <a href="{{ route('picker.logout') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
                             class="pe-7s-science btn-icon-wrapper"> </i> Logout Picker </button></a>
                 @else
-                <a href="{{ route('login') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
+                <a href="{{ route('picker.showlogin') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
                             class="pe-7s-science btn-icon-wrapper"> </i> Login Picker </button></a>
                 @endif
                 <h3 class="drawer-heading">Servers Status</h3>

@@ -24,6 +24,7 @@ class PickersTableSeeder extends Seeder
             'picker_category_id'  => '1',
             'pcnic'  => '99999-9999999-9',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'profile_image' => 'users/default.png',
             'pricing_plan_id' => '1',
 
 
@@ -37,6 +38,7 @@ class PickersTableSeeder extends Seeder
             'picker_category_id'  => '2',
             'pcnic'  => '99999-9999999-7',
             'pricing_plan_id' => '1',
+            'profile_image' => 'users/default.png',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
 
         ]);

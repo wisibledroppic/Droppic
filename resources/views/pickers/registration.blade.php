@@ -75,7 +75,7 @@
                                         <div class="position-relative form-group"><label for="exampleName"
                                                 class=""><span class="text-danger">*</span>Contact</label><input name="pcontact" id="pcontact" value="{{ old('pcontact') }}" required
                                                 autocomplete="pcontact" placeholder="Your Cell"
-                                                class="form-control input-mask-trigger  @error('pcontact') is-invalid @enderror" data-inputmask="'mask': '+[99-]999-9999999'" im-insert="true">
+                                                class="form-control input-mask-trigger  @error('pcontact') is-invalid @enderror" data-inputmask="'mask': '9999-9999999'" im-insert="true">
                                                 @error('pcontact')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

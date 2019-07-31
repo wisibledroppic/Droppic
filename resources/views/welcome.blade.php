@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Droppic- Makes your life easier.</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -13,11 +13,14 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                background-size: cover;
+                background-position: center;
+                background-image:url("../assets/images/originals/back.png");
+
             }
 
             .full-height {
@@ -64,6 +67,7 @@
         </style>
     </head>
     <body>
+
         <div class="flex-center position-ref full-height">
             <div class="top-right links">
                 <a href="{{ route('dropper.showlogin') }}">Dropper</a>
@@ -86,9 +90,9 @@
             @endif --}}
 
             <div class="content">
-                    <img src="{{Voyager::image (setting('site.logo'))}}" alt="Droppic Logo" width="400px" height="400px">
+                    {{-- <img src="{{Voyager::image (setting('site.logo'))}}" alt="Droppic Logo" width="400px" height="400px"> --}}
                 <div class="title m-b-md">
-                    Droppic
+                    {{-- Droppic --}}
                 </div>
                 <div class="container">
                     <div class="row">
