@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\PickerCategory;
 use App\Picker;
+use Session;
 
 class PickerRegistrationController extends Controller
 {
@@ -36,7 +37,7 @@ class PickerRegistrationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput($request->only('email','pname','pcontact','pcnic','cat'));
         }
-        
+
         $picker = new Picker ();
         $picker->pname = $request->get ( 'pname' );
         $picker->email = $request->get ( 'email' );
@@ -46,6 +47,7 @@ class PickerRegistrationController extends Controller
         $picker->password = Hash::make ( $request->get ( 'password' ) );
         //$dropper->password =( $request->get ( 'password' ) );
         $picker->save ();
+        Session::flash('flash_success','Welcome to Droppic '.Auth::guard('picker')->user()->pname.'Your account has been created and you are logged in.');
         return redirect()->intended(route('picker.dashboard'));
         return true;
     }

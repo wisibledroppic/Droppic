@@ -18,7 +18,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/pace.min.js') }}"></script>
     <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,48 +35,217 @@
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #fe0101;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+        .pt-3-half {
+            padding-top: 1.4rem;
+        }
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ff6347;
+            z-index: 999999;
+        }
+
+        .sk-folding-cube {
+            position: absolute;
+            top: 48%;
+            left: 48%;
+            width: 40px;
+            height: 40px;
+            -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+
+        .sk-folding-cube .sk-cube {
+            float: left;
+            width: 50%;
+            height: 50%;
+            position: relative;
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .sk-folding-cube .sk-cube:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+            -webkit-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+        }
+
+        .sk-folding-cube .sk-cube2 {
+            -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+        }
+
+        .sk-folding-cube .sk-cube3 {
+            -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+        }
+
+        .sk-folding-cube .sk-cube4 {
+            -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+        }
+
+        .sk-folding-cube .sk-cube2:before {
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+        }
+
+        .sk-folding-cube .sk-cube3:before {
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+
+        .sk-folding-cube .sk-cube4:before {
+            -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        /*  ------------------- */
+        @-webkit-keyframes sk-foldCubeAngle {
+
+            0%,
+            10% {
+                -webkit-transform: perspective(140px) rotateX(-180deg);
+                transform: perspective(140px) rotateX(-180deg);
+                opacity: 0;
+            }
+
+            25%,
+            75% {
+                -webkit-transform: perspective(140px) rotateX(0deg);
+                transform: perspective(140px) rotateX(0deg);
+                opacity: 1;
+            }
+
+            90%,
+            100% {
+                -webkit-transform: perspective(140px) rotateY(180deg);
+                transform: perspective(140px) rotateY(180deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sk-foldCubeAngle {
+
+            0%,
+            10% {
+                -webkit-transform: perspective(140px) rotateX(-180deg);
+                transform: perspective(140px) rotateX(-180deg);
+                opacity: 0;
+            }
+
+            25%,
+            75% {
+                -webkit-transform: perspective(140px) rotateX(0deg);
+                transform: perspective(140px) rotateX(0deg);
+                opacity: 1;
+            }
+
+            90%,
+            100% {
+                -webkit-transform: perspective(140px) rotateY(180deg);
+                transform: perspective(140px) rotateY(180deg);
+                opacity: 0;
+            }
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            //Preloader
+            $(window).on("load", function () {
+                preloaderFadeOutTime = 500;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+                hidePreloader();
+            });
+        });
+
+    </script>
 </head>
 
 <body>
-
-
-    {{-- @if (Auth::guard('dropper')->check())
-            @if (Request::is('droppers/*'))
-                {{Auth::guard('dropper')->user()->dname }}
-
-    @else
-
-
-    @endif
-
-    @else
-    @if (Auth::guard('web')->check())
-    @if (Request::is('admin/*'))
-    {{Auth::guard('web')->user()->name }}
-
-    @else
-
-
-    @endif
-
-    @else
-    @if (Auth::guard('picker')->check())
-    @if (Request::is('pickers/*'))
-    {{Auth::guard('picker')->user()->pname }}
-
-    @else
-
-
-    @endif
-
-    @else
-    I AM GUEST
-    @endif
-    @endif
-    @endif --}}
-
-
-
+    {{-- <div class="spinner-wrapper">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div> --}}
     <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
         <div class="app-header header-shadow">
             <div class="app-header__logo">
@@ -414,7 +585,7 @@
                                 <div class="dropdown-menu-header mb-0">
                                     <div class="dropdown-menu-header-inner bg-deep-blue">
                                         <div class="menu-header-image opacity-1"
-                                            style="background-image: url('assets/images/dropdown-header/city3.jpg');">
+                                            style="background-image: url('../assets/images/dropdown-header/city3.jpg');">
                                         </div>
                                         <div class="menu-header-content text-dark">
                                             <h5 class="menu-header-title">Notifications</h5>
@@ -503,49 +674,50 @@
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/1.jpg"
+
+                                                                                            src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/2.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/2.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/3.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/3.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/4.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/4.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/5.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/5.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/9.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/9.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/7.jpg"
+                                                                                            src{{ asset('assets/images/avatars/7.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
                                                                                     class="avatar-icon-wrapper avatar-icon-sm">
                                                                                     <div class="avatar-icon"><img
-                                                                                            src="assets/images/avatars/8.jpg"
+                                                                                            src="{{ asset('assets/images/avatars/8.jpg') }}"
                                                                                             alt=""></div>
                                                                                 </div>
                                                                                 <div
@@ -915,7 +1087,7 @@
                                     <div class="btn-group">
                                         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                             class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg"
+                                            <img width="42" class="rounded-circle" src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                 alt="">
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
@@ -931,7 +1103,7 @@
                                                             <div class="widget-content-wrapper">
                                                                 <div class="widget-content-left mr-3">
                                                                     <img width="42" class="rounded-circle"
-                                                                        src="assets/images/avatars/1.jpg" alt="">
+                                                                        src="{{ asset('assets/images/avatars/1.jpg') }}" alt="">
                                                                 </div>
                                                                 <div class="widget-content-left">
                                                                     <div class="widget-heading">Alina Mcloughlin
@@ -1027,8 +1199,7 @@
                                         @if (Auth::guard('picker')->check())
                                         {{Auth::guard('picker')->user()->pname }}
                                         @else
-                                        <button class="btn"><a href="{{ route('picker.showlogin') }}"
-                                                class="btn-lg btn btn-link">Picker Login</a></button>
+                                        login as Picker
                                         @endif
                                     </div>
                                     <div class="widget-subheading">
@@ -1617,57 +1788,18 @@
                 <div class="scrollbar-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
-                            <li class="app-sidebar__heading">Menu</li>
-                            <li class="mm-active">
+                            <li class="app-sidebar__heading">Droppers</li>
+                            <li class="">
                                 <a href="#">
                                     <i class="metismenu-icon pe-7s-rocket"></i>
-                                    Dashboards
+                                    Dummy
                                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
-                                        <a href="index.html" class="mm-active">
+                                        <a href="#" class="mm-active">
                                             <i class="metismenu-icon">
-                                            </i>Analytics
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboards-commerce.html">
-                                            <i class="metismenu-icon">
-                                            </i>Commerce
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="dashboards-sales.html">
-                                            <i class="metismenu-icon">
-                                            </i>Sales
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="metismenu-icon"></i>
-                                            Minimal
-                                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a href="dashboards-minimal-1.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Variation 1
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="dashboards-minimal-2.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Variation 2
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="dashboards-crm.html">
-                                            <i class="metismenu-icon"></i>
-                                            CRM
+                                            </i>Dummy Option
                                         </a>
                                     </li>
                                 </ul>
@@ -1740,109 +1872,6 @@
                                         <a href="apps-faq-section.html">
                                             <i class="metismenu-icon">
                                             </i>FAQ Section
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="app-sidebar__heading">UI Components</li>
-                            <li>
-                                <a href="#">
-                                    <i class="metismenu-icon pe-7s-diamond"></i>
-                                    Elements
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="metismenu-icon"></i>
-                                            Buttons
-                                            <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                        </a>
-                                        <ul>
-                                            <li>
-                                                <a href="elements-buttons-standard.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Standard
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-buttons-pills.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Pills
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-buttons-square.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Square
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-buttons-shadow.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>Shadow
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="elements-buttons-icons.html">
-                                                    <i class="metismenu-icon">
-                                                    </i>With Icons
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="elements-dropdowns.html">
-                                            <i class="metismenu-icon">
-                                            </i>Dropdowns
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-icons.html">
-                                            <i class="metismenu-icon">
-                                            </i>Icons
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-badges-labels.html">
-                                            <i class="metismenu-icon">
-                                            </i>Badges
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-cards.html">
-                                            <i class="metismenu-icon">
-                                            </i>Cards
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-loaders.html">
-                                            <i class="metismenu-icon">
-                                            </i>Loading Indicators
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-list-group.html">
-                                            <i class="metismenu-icon">
-                                            </i>List Groups
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-navigation.html">
-                                            <i class="metismenu-icon">
-                                            </i>Navigation Menus
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-timelines.html">
-                                            <i class="metismenu-icon">
-                                            </i>Timeline
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="elements-utilities.html">
-                                            <i class="metismenu-icon">
-                                            </i>Utilities
                                         </a>
                                     </li>
                                 </ul>
@@ -1985,31 +2014,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="app-sidebar__heading">Dashboard Widgets</li>
-                            <li>
-                                <a href="widgets-chart-boxes.html">
-                                    <i class="metismenu-icon pe-7s-graph">
-                                    </i>Chart Boxes 1
-                                </a>
-                            </li>
-                            <li>
-                                <a href="widgets-chart-boxes-2.html">
-                                    <i class="metismenu-icon pe-7s-way">
-                                    </i>Chart Boxes 2
-                                </a>
-                            </li>
-                            <li>
-                                <a href="widgets-chart-boxes-3.html">
-                                    <i class="metismenu-icon pe-7s-ball">
-                                    </i>Chart Boxes 3
-                                </a>
-                            </li>
-                            <li>
-                                <a href="widgets-profile-boxes.html">
-                                    <i class="metismenu-icon pe-7s-id">
-                                    </i>Profile Boxes
-                                </a>
-                            </li>
+                            <li class="app-sidebar__heading">Picker Options</li>
                             <li class="app-sidebar__heading">Forms</li>
                             <li>
                                 <a href="#">
@@ -2124,10 +2129,42 @@
                     </div>
                 </div>
             </div>
-            <div class="app-main__inner">
-                @yield('content')
-            </div>
             <div class="app-main__outer">
+                {{-- <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="panel">
+                                @component('components.who')
+                                @endcomponent
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="app-main__inner">
+                        @if(Session::has('flash_success'))
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_success') !!}</strong>
+                        </div>
+                        @endif
+
+
+                        @if(Session::has('flash_info'))
+                        <div class="alert alert-info alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_info') !!}</strong>
+                        </div>
+                        @endif
+
+                        @if(Session::has('flash_danger'))
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>{!! session('flash_danger') !!}</strong>
+                        </div>
+                        @endif
+                    @yield('content')
+                </div>
+
                 <div class="app-wrapper-footer">
                     <div class="app-footer">
                         <div class="app-footer__inner">
@@ -2145,7 +2182,7 @@
                                             <div class="dropdown-menu-header mb-0">
                                                 <div class="dropdown-menu-header-inner bg-deep-blue">
                                                     <div class="menu-header-image opacity-1"
-                                                        style="background-image: url('assets/images/dropdown-header/city3.jpg');">
+                                                        style="background-image: url('../assets/images/dropdown-header/city3.jpg');">
                                                     </div>
                                                     <div class="menu-header-content text-dark">
                                                         <h5 class="menu-header-title">Notifications</h5>
@@ -2238,56 +2275,56 @@
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/1.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/1.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/2.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/2.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/3.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/3.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/4.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/4.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/5.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/5.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/9.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/9.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/7.jpg"
+                                                                                                    <img src=".{{ asset('assets/images/avatars/7.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
                                                                                                 class="avatar-icon-wrapper avatar-icon-sm">
                                                                                                 <div
                                                                                                     class="avatar-icon">
-                                                                                                    <img src="assets/images/avatars/8.jpg"
+                                                                                                    <img src="{{ asset('assets/images/avatars/8.jpg') }}"
                                                                                                         alt=""></div>
                                                                                             </div>
                                                                                             <div
@@ -2824,6 +2861,13 @@
         </div>
         <div class="drawer-content-wrapper">
             <div class="scrollbar-container">
+                @if (Auth::guard('picker')->check())
+                <a href="{{ route('picker.logout') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
+                            class="pe-7s-science btn-icon-wrapper"> </i> Logout Picker </button></a>
+                @else
+                <a href="{{ route('login') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
+                            class="pe-7s-science btn-icon-wrapper"> </i> Login Picker </button></a>
+                @endif
                 <h3 class="drawer-heading">Servers Status</h3>
                 <div class="drawer-section">
                     <div class="divider"></div>
@@ -2871,89 +2915,36 @@
     </div>
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
 
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Droppic') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-                    <div>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
-
-                    <!-- Right Side Of Navbar -->
-                    {{-- <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>
-                    @endif
-                    @else
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                    @endguest
-                    </ul> --}}
-
-
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            {{-- <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="panel">
-                            @component('components.who')
-                            @endcomponent
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
-        </main>
-    </div>
 </body>
 
 </html>
+
+<div id="pricing-plan-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+                <strong>Add Pricing Plan</strong>
+          <a class="close" data-dismiss="modal">×</a>
+
+        </div>
+        <form method="POST" action="{{ route('admin.createPlan') }}" id="pricingPlanForm" name="addplan" role="form">
+            @csrf
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="name">Plan Name</label>
+              <input type="text" required name="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount per Month</label>
+              <input type="number" required name="amount" class="form-control">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-success" id="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -40,7 +40,7 @@ class DropperLoginController extends Controller
             // $dropper = Dropper::where('email', $request->email)->first();
             // Auth::guard('dropper')->login($dropper);
             Session::flash('flash_success','You have been Logged in. Welcome back '.Auth::guard('dropper')->user()->dname.'.');
-            return redirect()->intended(route('dropper.dashboard')); 
+            return redirect()->intended(route('dropper.dashboard'));
         }
         else{
             return redirect()->back()->withInput($request->only('email','remember'));
@@ -52,5 +52,5 @@ class DropperLoginController extends Controller
         Session::flash('flash_info','You have been Logged out.');
         return redirect('droppers/login');
     }
-       
+
 }

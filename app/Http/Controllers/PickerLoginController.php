@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\PickerCategory;
 use Auth;
+use Session;
 
 use App\Picker;
 
@@ -14,7 +15,7 @@ class PickerLoginController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest:picker');
+        $this->middleware('guest:picker')->except('logPickerOut');
         //$this->middleware('guest:picker')->except('logout');
     }
 
@@ -37,12 +38,18 @@ class PickerLoginController extends Controller
         if(Auth::guard('picker')->attempt($credentials)){
             //return redirect('droppers/dashboard');
             //$c = PickerCategory::find($request->cat);
-            
+            Session::flash('flash_success','You have been Logged in. Welcome back '.Auth::guard('picker')->user()->pname.'.');
             //$c = PickerCategory::where('picker_category_id', $request->cat);
             return redirect()->intended(route('picker.dashboard'));
         }
         else{
             return redirect()->back()->withInput($request->only('email','remember'));
         }
+    }
+
+    public function logPickerOut(){
+        Auth::guard('picker')->logout();
+        Session::flash('flash_info','You have been Logged out.');
+        return redirect('pickers/login');
     }
 }

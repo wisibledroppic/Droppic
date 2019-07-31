@@ -5,7 +5,7 @@ namespace TCG\Voyager\Widgets;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 
-class DropperDimmer extends BaseDimmer
+class RequestDimmer extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -20,23 +20,23 @@ class DropperDimmer extends BaseDimmer
      */
     public function run()
     {
-        $count = \App\Dropper::count();
-        $signedUp =\App\Dropper::where('status_id',1)->count();
-        $active =\App\Dropper::where('status_id',3)->count();
-        $deactive =\App\Dropper::where('status_id',4)->count();
+        $count = \App\Request::count();
+        // $customer =\App\Picker::where('picker_category_id',1)->count();
+        // $seller =\App\Picker::where('picker_category_id',2)->count();
+        // $courier =\App\Picker::where('picker_category_id',3)->count();
         // $string = trans_choice('voyager::dimmer.user', $count);
-        $string = 'Droppers';
+        $string = 'Requests';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-bag',
+            'icon'   => 'voyager-basket',
             'title'  => "{$count} {$string}",
-            'text'   => 'You have '.$count. ' Droppers in your database. Click on button below to view all droppers.',
-            'cat'    => 'Signed Up '.$signedUp.' , Active '.$active.' , Deactive '.$deactive.'. ',
+            'text'   => 'You have '.$count. ' Request in your database. Click on button below to view all requests.',
+            'cat'    => '',
             'button' => [
-                'text' => 'View all Droppers',
-                'link' => route('voyager.droppers.index'),
+                'text' => 'View all Requests',
+                'link' => route('voyager.requests.index'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/04.jpg'),
+            'image' => voyager_asset('images/widget-backgrounds/06.png'),
         ]));
     }
 

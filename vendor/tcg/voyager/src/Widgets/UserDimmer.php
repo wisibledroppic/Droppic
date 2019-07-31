@@ -22,11 +22,14 @@ class UserDimmer extends BaseDimmer
     {
         $count = Voyager::model('User')->count();
         $string = trans_choice('voyager::dimmer.user', $count);
+        $admin= \App\User::where('role_id',1)->count();
+        $u= \App\User::where('role_id',2)->count();
 
         return view('voyager::dimmer', array_merge($this->config, [
             'icon'   => 'voyager-group',
             'title'  => "{$count} {$string}",
             'text'   => __('voyager::dimmer.user_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'cat'    => 'Administrator '.$admin.' , Normal User '.$u.'. ',
             'button' => [
                 'text' => __('voyager::dimmer.user_link_text'),
                 'link' => route('voyager.users.index'),

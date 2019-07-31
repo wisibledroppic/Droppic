@@ -44,6 +44,8 @@ Route::prefix('pickers')->group(function(){
     Route::get('/login', ['as' => 'picker.showlogin', 'uses' => 'PickerLoginController@showPickersLoginForm']);
     Route::post('/login', ['as' => 'picker.login.submit', 'uses' => 'PickerLoginController@login']);
 
+    Route::get('/logout', ['as' => 'picker.logout', 'uses' => 'PickerLoginController@logPickerOut']);
+
     Route::get('/profile', ['as' => 'picker.showProfile', 'uses' => 'PickerController@showPickersProfile']);
     Route::post('/profile', ['as' => 'picker.editProfile', 'uses' => 'PickerController@editPickersProfile']);
 });
