@@ -2116,7 +2116,7 @@
                             </li>
                             <li class="app-sidebar__heading">Requests</li>
                             <li>
-                                <a href="charts-chartjs.html">
+                                <a href="{{ route('show.requestform') }}">
                                     <i class="metismenu-icon pe-7s-graph2">
                                     </i>Add Request
                                 </a>

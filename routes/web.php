@@ -45,7 +45,9 @@ Route::prefix('pickers')->group(function(){
     Route::post('/login', ['as' => 'picker.login.submit', 'uses' => 'PickerLoginController@login']);
 
     Route::get('/logout', ['as' => 'picker.logout', 'uses' => 'PickerLoginController@logPickerOut']);
+    Route::get('/request', ['as' => 'show.requestform', 'uses' => 'RequestController@showRequestForm']);
 
+    Route::post('/requestadd', ['as' => 'picker.addrequest', 'uses' => 'RequestController@addRequest']);
     Route::get('/profile', ['as' => 'picker.showProfile', 'uses' => 'PickerController@showPickersProfile']);
     Route::post('/profile', ['as' => 'picker.editProfile', 'uses' => 'PickerController@editPickersProfile']);
 });
@@ -56,6 +58,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/droppers/list', ['as' => 'admin.showDroppers', 'uses' => 'AdminController@showDroppers']);
     Route::get('/pickers/list', ['as' => 'admin.showPickers', 'uses' => 'AdminController@showPickers']);
     Route::get('/logout', ['as' => 'admin.logout', 'uses' => 'Auth\LoginController@logAdminOut']);
+
     Route::get('/pricingplans', ['as' => 'admin.pricingPlans', 'uses' => 'AdminController@pricingPlans']);
     Route::post('/addpricingplans', ['as' => 'admin.createPlan', 'uses' => 'AdminController@createPricingPlan']);
     Route::get('/banks', ['as' => 'admin.showBanks', 'uses' => 'BankCsv@index']);
