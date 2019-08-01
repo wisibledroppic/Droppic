@@ -53,28 +53,33 @@
                         <h4 class="mb-0">
                             <span class="d-block">Welcome back,</span>
                             <span>Please sign in to your account.</span></h4>
-                        <h6 class="mt-3">No account? <a href="javascript:void(0);" class="text-primary">Sign up now</a></h6>
+                        <h6 class="mt-3">No account? <a href="/registration" class="text-primary">Sign up now</a></h6>
                         <div class="divider row"></div>
                         <div>
-                            <form class="">
+                            {{Form::open(['url'=>'/login','class'=>'','id'=>'loginform'])}}
                                 {{ csrf_field() }}
                                 <div class="form-row">
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="exampleEmail" class="">Email</label><input name="email" id="exampleEmail" placeholder="Email here..." type="email" class="form-control"></div>
+                                        <div class="position-relative form-group">
+                                            {{ Form::label('email', 'Email') }}
+                                            {{ Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Name', 'autofocus', 'required']) }}
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="position-relative form-group"><label for="examplePassword" class="">Password</label><input name="password" id="examplePassword" placeholder="Password here..." type="password"
-                                                                                                                                               class="form-control"></div>
+                                        <div class="position-relative form-group">
+                                            {{ Form::label('password', 'Password') }}
+                                            {{ Form::password('password', ['class'=>'form-control', 'placeholder'=>'Password', 'required']) }}
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="position-relative form-check"><input name="check" id="exampleCheck" type="checkbox" class="form-check-input"><label for="exampleCheck" class="form-check-label">Keep me logged in</label></div>
                                 <div class="divider row"></div>
                                 <div class="d-flex align-items-center">
                                     <div class="ml-auto"><a href="javascript:void(0);" class="btn-lg btn btn-link">Recover Password</a>
-                                        <button class="btn btn-primary btn-lg">Login to Dashboard</button>
+                                        {{ Form::submit('Login to Dashboard', ['class'=>'btn btn-primary btn-lg']) }}
                                     </div>
                                 </div>
-                            </form>
+                            {{Form::close()}}
                         </div>
                     </div>
                 </div>

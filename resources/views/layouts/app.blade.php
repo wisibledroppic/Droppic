@@ -13,9 +13,9 @@
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <link href="{{ URL::asset('assets/main.8d288f825d8dffbbe55e.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/main.8d288f825d8dffbbe55e.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/pe-icon-7-stroke.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/pe-icon-7-stroke.css')}}">
 </head>
 <body>
 <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
@@ -1802,7 +1802,7 @@
                                                             {{--</div>--}}
                                                             {{--<div class="widget-content-left mr-3">--}}
                                                                 {{--<div class="widget-content-left">--}}
-                                                                    {{--<img width="42" class="rounded" src="{{ URL::asset('assets/images/avatars/1.jpg')}}" alt="">--}}
+                                                                    {{--<img width="42" class="rounded" src="{{ asset('assets/images/avatars/1.jpg')}}" alt="">--}}
                                                                 {{--</div>--}}
                                                             {{--</div>--}}
                                                             {{--<div class="widget-content-left">--}}
@@ -2621,6 +2621,6 @@
     </div>
 </div>
 <div class="app-drawer-overlay d-none animated fadeIn"></div>
-<script type="text/javascript" src="{{ URL::asset('assets/scripts/main.8d288f825d8dffbbe55e.js')}}"></script>
+<script type="text/javascript" src="{{ asset('assets/scripts/main.8d288f825d8dffbbe55e.js')}}"></script>
 </body>
 </html>

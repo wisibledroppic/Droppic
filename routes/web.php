@@ -19,7 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/login', 'DropperLoginController@showDroppersLoginForm');
-Route::get('/registration','DropperRegistrationController@showDroppersResgistrationForm');
+Route::get('/registration','RegistrationController@show');
+Route::post('/registration','RegistrationController@saveCredentials');
 
 Route::get('dashboard', function (){
     return view('layouts/app');
