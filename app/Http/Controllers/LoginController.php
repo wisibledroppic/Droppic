@@ -15,7 +15,7 @@ class LoginController extends Controller
         $password = $request->input('password');
 
         if(Auth::attempt(['username'=>$username, 'password'=>$password])){
-            return redirect('/');
+            return redirect('/dashboard');
         }
         return back()->with('error','Invalid credentials');
     }

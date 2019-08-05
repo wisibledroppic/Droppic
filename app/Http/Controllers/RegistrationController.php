@@ -18,8 +18,8 @@ class RegistrationController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:6',
             'confirmpass' => 'required|same:password',
-            'contact' => 'required|min:11',
-            'cnic' => 'required|min:13',
+            'contact' => 'required',
+            'cnic' => 'required',
             'role' => 'required',
         ];
         $this->validate($request,$rules);
@@ -33,6 +33,6 @@ class RegistrationController extends Controller
         $userData->category = $request->input('category');
         $userData->status = 'active';
         $userData->save();
-        return redirect('/dashboard');
+        return redirect('/dashboard')->with('error','error occorred');
     }
 }

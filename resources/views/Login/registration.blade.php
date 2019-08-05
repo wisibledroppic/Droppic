@@ -26,9 +26,11 @@
                         <div class="app-logo"></div>
                         <h4>
                             <div>Welcome,</div>
-                            <span>It only takes a <span class="text-success">few seconds</span> to create your account</span></h4>
+                            <span>It only takes a <span class="text-success">few seconds</span> to create your account</span>
+                        </h4>
+                        @include('layouts.flash-messages')
                         <div>
-                            {{Form::open(['url'=>'/login','class'=>'','id'=>'registrationform'])}}
+                            {{Form::open(['url'=>'/registration','class'=>'','id'=>'registrationform'])}}
                                 <div class="form-row">
                                     <div class="col-md-6">
                                         <div class="position-relative form-group">
@@ -39,7 +41,7 @@
                                     <div class="col-md-6">
                                         <div class="position-relative form-group">
                                             {{ Form::label('email', 'Email') }}
-                                            {{ Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Name', 'autofocus', 'required']) }}
+                                            {{ Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'Name', 'autofocus', 'required']) }}
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -91,7 +93,6 @@
                                         });
                                     </script>
                                 </div>
-                            @include('layouts.flash-messages')
                                 <div class="mt-3 position-relative form-check"><input name="check" id="exampleCheck" type="checkbox" class="form-check-input"><label for="exampleCheck" class="form-check-label">Accept our <a href="javascript:void(0);">Terms
                                             and Conditions</a>.</label></div>
                                 <div class="mt-4 d-flex align-items-center">

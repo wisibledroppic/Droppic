@@ -62,7 +62,7 @@
                                     <div class="col-md-6">
                                         <div class="position-relative form-group">
                                             {{ Form::label('email', 'Email') }}
-                                            {{ Form::text('name', null, ['class'=>'form-control', 'placeholder'=>'Name', 'autofocus', 'required']) }}
+                                            {{ Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'Name', 'autofocus', 'required']) }}
                                         </div>
                                     </div>
                                     <div class="col-md-6">
