@@ -19,10 +19,10 @@ class DropperRegistrationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest:dropper');
+        //$this->middleware('guest:dropper');
     }
 
-    
+
     public function showDroppersResgistrationForm(){
         //return view ('pages.home')->with('news',$news);
         return view ('droppers.registration');
@@ -41,7 +41,7 @@ class DropperRegistrationController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput($request->only('email','dname','dcontact','dcnic'));
         }
-        
+
         $dropper = new Dropper ();
         $dropper->dname = $request->get ( 'dname' );
         $dropper->email = $request->get ( 'email' );
@@ -50,7 +50,7 @@ class DropperRegistrationController extends Controller
         $dropper->password = Hash::make ( $request->get ( 'password' ) );
         //$dropper->password =( $request->get ( 'password' ) );
         $dropper->save ();
-        Session::flash('flash_success','Welcome to Droppic '.Auth::guard('dropper')->user()->dname.'Your account has been created and you are logged in.');
+        Session::flash('flash_success','Welcome to Droppic Your account has been created and now you can login.');
         return redirect()->intended(route('dropper.dashboard'));
     }
 }

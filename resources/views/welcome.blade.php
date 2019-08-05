@@ -70,10 +70,10 @@
 
         <div class="flex-center position-ref full-height">
             <div class="top-right links">
-                <a href="{{ route('dropper.showlogin') }}">Dropper</a>
+                <a href="{{ route('show.signin') }}">Signin</a>
                 {{-- <a href="{{ route('picker.showlogin') }}">Picker</a> --}}
-                <a href="{{ route('picker.showlogin') }}">Picker</a>
-                <a href="{{ route('voyager.dashboard') }}">Admin</a>
+                <a href="{{ route('show.signup') }}">Signup</a>
+                <a href="{{ route('voyager.dashboard') }}">Admin Panel</a>
             </div>
             {{-- @if (Route::has('login'))
                 <div class="top-right links">

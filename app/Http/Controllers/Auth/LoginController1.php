@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 use Session;
 
-class LoginController extends Controller
+class LoginController1 extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/dashboard';
+    protected $redirectTo = '';
 
     /**
      * Create a new controller instance.
@@ -37,13 +37,23 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logAdminOut');
+        $this->middleware('guest:dropper')->except('logDropperOut');
+        $this->middleware('guest:picker')->except('logPickerOut');
     }
 
-    public function logAdminOut (){
-        Auth::guard('web')->logout();
-        return redirect('login');
+    public function logDropperOut(){
+        Auth::guard('dropper')->logout();
+        Session::flash('flash_info','You have been Logged out.');
+        return redirect('signin');
     }
+
+
+    public function logPickerOut(){
+        Auth::guard('picker')->logout();
+        Session::flash('flash_info','You have been Logged out.');
+        return redirect('signin');
+    }
+
     public function show(){
         return view('login');
     }

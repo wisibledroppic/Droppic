@@ -63,27 +63,27 @@ class DropperController extends Controller
             return redirect()->back()->withErrors($validator)->withInput($request->only('email','dname','dcontact','dcnic','hrs_from','hrs_to'));
         } else {
             if ($first==$second) {
-                if (true) {   
+                if (true) {
                     // $third =(int) (substr($request->get ( 'hrs_from' ), strpos($request->get ( 'hrs_from' ), ":") + 1));
-                    // $fourth =(int) (substr($request->get ( 'hrs_to' ), strpos($request->get ( 'hrs_to' ), ":") + 1)); 
-                    // echo ($third+ '     '+$fourth); 
+                    // $fourth =(int) (substr($request->get ( 'hrs_to' ), strpos($request->get ( 'hrs_to' ), ":") + 1));
+                    // echo ($third+ '     '+$fourth);
                 } else {
-                   
+
                 }
-                
+
             } else {
                 $dropper->hrs_from = $request->get ( 'hrs_from' );
                 $dropper->hrs_to = $request->get ( 'hrs_to' );
             }
-            
+
         }
-        
-        
-        
+
+
+
         $dropper->save ();
         Session::flash('flash_success','Hey '.Auth::guard('dropper')->user()->dname.' , Your profile has been updated successfully.');
         return redirect()->intended(route('dropper.showProfile'));
     }
 
-    
+
 }

@@ -12,7 +12,7 @@ $factory->define(Dropper::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => Hash::make('hello123'), // password
-        'dcontact' => Str::random(15),
+        'dcontact' => Str::random(12),
         'hrs_from'  => '8:45',
         'hrs_to'  => '18:45',
         'dcnic' => Str::random(15),

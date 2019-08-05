@@ -17,21 +17,44 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
     <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/modal.js') }}"></script>
+
+    <link href="{{ asset('css/spinner_wrapper.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.8d288f825d8dffbbe55e.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+
     <link href="{{ asset('css/main.8d288f825d8dffbbe55e.css') }}" rel="stylesheet">
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+
+    <script>
+
+    $(document).ready(function () {
+            //Preloader
+            $(window).on("load", function () {
+                preloaderFadeOutTime = 300;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+                hidePreloader();
+            });
+        });
+</script>
+
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -879,137 +902,152 @@
 
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
-                            <div class="widget-content-wrapper">
-                                <div class="widget-content-left">
-                                    <div class="btn-group">
-                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                            class="p-0 btn">
-                                            <img width="42" class="rounded-circle" src="../assets/images/avatars/1.jpg"
-                                                alt="">
-                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                                        </a>
-                                        <div tabindex="-1" role="menu" aria-hidden="true"
-                                            class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
-                                            <div class="dropdown-menu-header">
-                                                <div class="dropdown-menu-header-inner bg-info">
-                                                    <div class="menu-header-image opacity-2"
-                                                        style="background-image: url('assets/images/dropdown-header/city3.jpg');">
-                                                    </div>
-                                                    <div class="menu-header-content text-left">
-                                                        <div class="widget-content p-0">
-                                                            <div class="widget-content-wrapper">
-                                                                <div class="widget-content-left mr-3">
-                                                                    <img width="42" class="rounded-circle"
-                                                                        src="../assets/images/avatars/1.jpg" alt="">
-                                                                </div>
-                                                                <div class="widget-content-left">
-                                                                    <div class="widget-heading">Alina Mcloughlin
+                                <div class="widget-content-wrapper">
+                                        <div class="widget-content-left">
+                                            <div class="btn-group">
+                                                @if (Auth::guard('dropper')->check())
+                                                <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                class="p-0 btn">
+                                                <img width="42" class="rounded-circle" src="{{ URL::asset('storage/'. Auth::guard('dropper')->user()->profile_image ) }}"
+                                                    alt="">
+                                                <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                            </a>
+                                                @endif
+                                                <div tabindex="-1" role="menu" aria-hidden="true"
+                                                    class="rm-pointers dropdown-menu-lg dropdown-menu dropdown-menu-right">
+                                                    <div class="dropdown-menu-header">
+                                                        <div class="dropdown-menu-header-inner bg-info">
+                                                            <div class="menu-header-image opacity-2"
+                                                                style="background-image: url('assets/images/dropdown-header/city3.jpg');">
+                                                            </div>
+                                                            <div class="menu-header-content text-left">
+                                                                <div class="widget-content p-0">
+                                                                    <div class="widget-content-wrapper">
+                                                                        @if (Auth::guard('dropper')->check())
+                                                                        <div class="widget-content-left mr-3">
+                                                                            <img width="42" class="rounded-circle"
+                                                                            src="{{ URL::asset('storage/'. Auth::guard('dropper')->user()->profile_image ) }}" alt="Dropper Image">
+                                                                        </div>
+                                                                        @endif
+                                                                        <div class="widget-content-left">
+                                                                                @if (Auth::guard('dropper')->check())
+
+                                                                            <div class="widget-heading">{{Auth::guard('dropper')->user()->dname }}
+                                                                            </div>
+                                                                            <div class="widget-subheading opacity-8">{{Auth::guard('dropper')->user()->dcnic }}
+                                                                            </div>
+                                                                            @endif
+                                                                        </div>
+                                                                        <div class="widget-content-right mr-2">
+                                                                                <a href="{{ route('dropper.showProfile') }}">
+                                                                            <button
+                                                                                class="btn-pill btn-shadow btn-shine btn btn-focus">Profile
+                                                                            </button>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="widget-content-right mr-2">
+                                                                            <a href="{{ route('dropper.logout') }}">
+                                                                        <button
+                                                                            class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
+                                                                        </button>
+                                                                        </a>
                                                                     </div>
-                                                                    <div class="widget-subheading opacity-8">A short
-                                                                        profile description
                                                                     </div>
-                                                                </div>
-                                                                <div class="widget-content-right mr-2">
-                                                                    <button
-                                                                        class="btn-pill btn-shadow btn-shine btn btn-focus">Logout
-                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="scroll-area-xs" style="height: 150px;">
-                                                <div class="scrollbar-container ps">
+                                                    <div class="scroll-area-xs" style="height: 150px;">
+                                                        <div class="scrollbar-container ps">
+                                                            <ul class="nav flex-column">
+                                                                <li class="nav-item-header nav-item">Activity
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="javascript:void(0);" class="nav-link">Chat
+                                                                        <div class="ml-auto badge badge-pill badge-info">8
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="javascript:void(0);" class="nav-link">Recover
+                                                                        Password
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item-header nav-item">My Account
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="javascript:void(0);" class="nav-link">Settings
+                                                                        <div class="ml-auto badge badge-success">New
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="javascript:void(0);" class="nav-link">Messages
+                                                                        <div class="ml-auto badge badge-warning">512
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="javascript:void(0);" class="nav-link">Logs
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                     <ul class="nav flex-column">
-                                                        <li class="nav-item-header nav-item">Activity
+                                                        <li class="nav-item-divider mb-0 nav-item"></li>
+                                                    </ul>
+                                                    <div class="grid-menu grid-menu-2col">
+                                                        <div class="no-gutters row">
+                                                            <div class="col-sm-6">
+                                                                <button
+                                                                    class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-warning">
+                                                                    <i
+                                                                        class="pe-7s-chat icon-gradient bg-amy-crisp btn-icon-wrapper mb-2"></i>
+                                                                    Message Inbox
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <button
+                                                                    class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-danger">
+                                                                    <i
+                                                                        class="pe-7s-ticket icon-gradient bg-love-kiss btn-icon-wrapper mb-2"></i>
+                                                                    <b>Support Tickets</b>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="nav flex-column">
+                                                        <li class="nav-item-divider nav-item">
                                                         </li>
-                                                        <li class="nav-item">
-                                                            <a href="javascript:void(0);" class="nav-link">Chat
-                                                                <div class="ml-auto badge badge-pill badge-info">8
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a href="javascript:void(0);" class="nav-link">Recover
-                                                                Password
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item-header nav-item">My Account
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a href="javascript:void(0);" class="nav-link">Settings
-                                                                <div class="ml-auto badge badge-success">New
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a href="javascript:void(0);" class="nav-link">Messages
-                                                                <div class="ml-auto badge badge-warning">512
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a href="javascript:void(0);" class="nav-link">Logs
-                                                            </a>
+                                                        <li class="nav-item-btn text-center nav-item">
+                                                            <button class="btn-wide btn btn-primary btn-sm">
+                                                                Open Messages
+                                                            </button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item-divider mb-0 nav-item"></li>
-                                            </ul>
-                                            <div class="grid-menu grid-menu-2col">
-                                                <div class="no-gutters row">
-                                                    <div class="col-sm-6">
-                                                        <button
-                                                            class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-warning">
-                                                            <i
-                                                                class="pe-7s-chat icon-gradient bg-amy-crisp btn-icon-wrapper mb-2"></i>
-                                                            Message Inbox
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <button
-                                                            class="btn-icon-vertical btn-transition btn-transition-alt pt-2 pb-2 btn btn-outline-danger">
-                                                            <i
-                                                                class="pe-7s-ticket icon-gradient bg-love-kiss btn-icon-wrapper mb-2"></i>
-                                                            <b>Support Tickets</b>
-                                                        </button>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <div class="widget-content-left  ml-3 header-user-info">
+                                            <div class="widget-heading">
+                                                @if (Auth::guard('dropper')->check())
+                                                {{Auth::guard('dropper')->user()->dname }}
+                                                {{-- @else
+                                                login as Picker --}}
+                                                @endif
                                             </div>
-                                            <ul class="nav flex-column">
-                                                <li class="nav-item-divider nav-item">
-                                                </li>
-                                                <li class="nav-item-btn text-center nav-item">
-                                                    <button class="btn-wide btn btn-primary btn-sm">
-                                                        Open Messages
-                                                    </button>
-                                                </li>
-                                            </ul>
+                                            <div class="widget-subheading">
+
+                                            </div>
+                                        </div>
+                                        <div class="widget-content-right header-user-info ml-3">
+                                            <button type="button"
+                                                class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                                <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading">
-                                        @if (Auth::guard('dropper')->check())
-                                        {{Auth::guard('dropper')->user()->dname }}
-                                        @else
-                                        login as dropper
-                                        @endif
-                                    </div>
-                                    <div class="widget-subheading">
-
-                                    </div>
-                                </div>
-                                <div class="widget-content-right header-user-info ml-3">
-                                    <button type="button"
-                                        class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="header-btn-lg">
@@ -2110,7 +2148,7 @@
                             <strong>{!! session('flash_success') !!}</strong>
                         </div>
                         @endif
-                
+
 
                         @if(Session::has('flash_info'))
                         <div class="alert alert-info alert-dismissible">
@@ -2831,6 +2869,7 @@
                 <a href="{{ route('dropper.showlogin') }}"><button class="mb-2 mr-2 btn-icon-vertical btn btn-info"><i
                             class="pe-7s-science btn-icon-wrapper"> </i> Login Dropper </button></a>
                 @endif
+
                 <h3 class="drawer-heading">Servers Status</h3>
                 <div class="drawer-section">
                     <div class="divider"></div>
@@ -2878,7 +2917,7 @@
     </div>
     <div class="app-drawer-overlay d-none animated fadeIn"></div>
 
-    
+
 </body>
 
 </html>

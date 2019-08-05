@@ -18,7 +18,8 @@
     @endif
 
 
-
+    <script src="{{ asset('js/main.8d288f825d8dffbbe55e.js') }}"></script>
+    {{-- <link href="{{ asset('css/main.8d288f825d8dffbbe55e.css') }}" rel="stylesheet"> --}}
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ voyager_asset('css/app.css') }}">
 

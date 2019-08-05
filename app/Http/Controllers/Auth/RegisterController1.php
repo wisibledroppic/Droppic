@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Session;
 use App\Dropper;
 use App\Picker;
-class RegisterController extends Controller
+class RegisterController1 extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/dashboard';
+    protected $redirectTo = '';
 
     /**
      * Create a new controller instance.
@@ -39,7 +39,8 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest:dropper');
+        $this->middleware('guest:picker');
     }
 
     /**
@@ -87,7 +88,6 @@ class RegisterController extends Controller
                 'contact' => 'required|min:12|max:12',
                 'cnic' => 'required|min:15|max:15',
                 'role' => 'required',
-                'check' => 'required',
                 'g-recaptcha-response' => 'required|captcha',
             ];
             $this->validate($request,$rules);
@@ -101,7 +101,7 @@ class RegisterController extends Controller
         //$dropper->password =( $request->get ( 'password' ) );
         $dropper->save ();
         Session::flash('flash_success','Welcome to Droppic Your account has been created and now you can login.');
-        return redirect()->intended(route('dropper.dashboard'));
+        return redirect()->intended(route('show.signin'));
         } else {
             if ($r=='Picker') {
                 $rules = [
@@ -113,7 +113,6 @@ class RegisterController extends Controller
                     'cnic' => 'required|min:15|max:15',
                     'role' => 'required',
                     'category' => 'required',
-                    'check' => 'required',
                     'g-recaptcha-response' => 'required|captcha',
                 ];
                 $this->validate($request,$rules);
@@ -129,7 +128,7 @@ class RegisterController extends Controller
             //$dropper->password =( $request->get ( 'password' ) );
             $picker->save ();
             Session::flash('flash_success','Welcome to Droppic Your account has been created and now you can login.');
-            return redirect()->intended(route('picker.dashboard'));
+            return redirect()->intended(route('show.signin'));
             } else {
                 # code...
             }

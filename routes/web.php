@@ -28,12 +28,18 @@ Route::prefix('droppers')->group(function(){
     Route::get('/login', ['as' => 'dropper.showlogin', 'uses' => 'DropperLoginController@showDroppersLoginForm']);
     Route::post('/login', ['as' => 'dropper.login.submit', 'uses' => 'DropperLoginController@login']);
 
-    Route::get('/logout', ['as' => 'dropper.logout', 'uses' => 'DropperLoginController@logDropperOut']);
+    Route::get('/logout', ['as' => 'dropper.logout', 'uses' => 'Auth\LoginController1@logDropperOut']);
 
     Route::get('/profile', ['as' => 'dropper.showProfile', 'uses' => 'DropperController@showDroppersProfile']);
     Route::post('/profile', ['as' => 'dropper.editProfile', 'uses' => 'DropperController@editDroppersProfile']);
+
 });
 
+Route::get('signin', ['as' => 'show.signin', 'uses' => 'Auth\LoginController1@show']);
+Route::get('signup', ['as' => 'show.signup', 'uses' => 'Auth\RegisterController1@show']);
+
+Route::post('signin', ['as' => 'sign.in', 'uses' => 'Auth\LoginController1@signin']);
+Route::post('signup', ['as' => 'sign.up', 'uses' => 'Auth\RegisterController1@signup']);
 
 Route::prefix('pickers')->group(function(){
     Route::get('/dashboard', ['as' => 'picker.dashboard', 'uses' => 'PickerController@index']);
@@ -44,7 +50,7 @@ Route::prefix('pickers')->group(function(){
     Route::get('/login', ['as' => 'picker.showlogin', 'uses' => 'PickerLoginController@showPickersLoginForm']);
     Route::post('/login', ['as' => 'picker.login.submit', 'uses' => 'PickerLoginController@login']);
 
-    Route::get('/logout', ['as' => 'picker.logout', 'uses' => 'PickerLoginController@logPickerOut']);
+    Route::get('/logout', ['as' => 'picker.logout', 'uses' => 'Auth\LoginController1@logPickerOut']);
     Route::get('/request', ['as' => 'show.requestform', 'uses' => 'RequestController@showRequestForm']);
 
     Route::post('/requestadd', ['as' => 'picker.addrequest', 'uses' => 'RequestController@addRequest']);

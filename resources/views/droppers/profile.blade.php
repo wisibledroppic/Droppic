@@ -4,8 +4,27 @@
 
 <div class="card-body">
     <h5 class="card-title">Dropper's Profile</h5>
-    <form method="POST" action="{{ route('dropper.editProfile') }}">
+
+    <form method="POST" action="{{ route('dropper.editProfile') }}" >
             @csrf
+                    <div class="card" style="width: 20rem;">
+                            <a href=""><img class="card-img-top" src="{{ URL::asset('storage/'. $dropper->profile_image) }}" alt="image avatar"></a>
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Name: {{$dropper->dname}}</strong></h5>
+                                <p class="card-text"><strong>Email : {{$dropper->email}}</strong></p>
+
+
+                            <div class="form-group row">
+                                <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('Upload Your Image') }}</label>
+
+                                <div class="col-md-6">
+                                    <input type="file" name="image" id="file">
+                                </div>
+                            </div>
+
+
+                            </div>
+                            </div>
         <div class="form-row">
             <div class="col-md-6">
                 <div class="position-relative form-group"><label for="dname" class="">Name</label><input name="dname"
@@ -73,7 +92,7 @@
         <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Update Profile
             </button>
-        
+
     </form>
 </div>
 

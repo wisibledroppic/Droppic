@@ -21,7 +21,7 @@ class CreateDroppersTable extends Migration
             $table->string('hrs_from')->nullable();
             $table->string('hrs_to')->nullable();
             $table->string('dcnic');
-            $table->string('profile_image')->nullable();
+            $table->string('profile_image')->nullable()->default('users/default.png');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('status_id')->references('status_id')->on('statuses')->nullable()->default('1');
